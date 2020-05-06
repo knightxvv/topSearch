@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>topSearch</title>
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/public.js"></script>
+    <script>    
+        $(function(){
+        	$('.website').click(function(){
+        		var target=$(this).attr('target');
+        		$.ajax({
+        			url:contextPath+'/parse/'+target,
+        			type:'get',
+        			dataType:'text',
+        			async:false,
+        			success:function(data){
+//         				alert(data)
+        				$('.main').append(data+'<br>');
+        			},error:function(data){
+//         				alert(JSON.stringify(data))
+        			}
+        		})
+        	})
+        	
+//         	setInterval(function(){
+//         		$('.website').each(function(){
+//                     var target=$(this).attr('target');
+//                     $.ajax({
+//                         url:contextPath+'/parse/'+target,
+//                         type:'get',
+//                         dataType:'text',
+//                         async:false,
+//                         success:function(data){
+//     //                      alert(data)
+//                             $('.main').append(data+'<br>');
+//                         },error:function(data){
+//     //                      alert(JSON.stringify(data))
+//                         }
+//                     })
+//                 })
+//         	},1000*60*10)
+            
+        });
+        
+    </script>
+</head>
+<body>
+    <div>
+        <input class="website" type="button" value="知乎" target="zhihu" onclick="">
+        <input class="website" type="button" value="百度" target="baidu" onclick="">
+        <input class="website" type="button" value="微博" target="weibo" onclick="">
+        <input class="website" type="button" value="B站" target="bilibili" onclick="">
+        <input class="website" type="button" value="贴吧" target="tieba" onclick="">
+        <input class="website" type="button" value="抖音" target="douyin" onclick="">
+        <input class="website" type="button" value="头条" target="toutiao" onclick="">
+    </div>    
+    
+    <div class='main' style="width:960px;height:540px;margin:auto;position:absolute;border:1px solid #000;box-sizing:border-box;">
+    
+    </div>
+
+</body>
+</html>
