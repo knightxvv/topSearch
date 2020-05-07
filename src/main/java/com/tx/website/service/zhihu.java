@@ -14,6 +14,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.tx.utils.*;
+import com.tx.website.dao.hotSearch;
+import com.tx.log.dao.log;
+import com.tx.log.service.*;
 
 @Service
 @EnableScheduling
@@ -24,6 +27,10 @@ public class zhihu {
     private MyHttpClient MyHttpClient;
     @Autowired
     private MyResult MyResult;
+    @Autowired
+    private hotSearchService hotSearchService;
+    @Autowired
+    private logService logService;
     
 	public static String url="http://www.zhihu.com/billboard";
 	public static String website="zhihu";
@@ -58,16 +65,23 @@ public class zhihu {
 //			System.out.println("内容:" + content);
 //			System.out.println("热度:" + score);
 			String sql=String.format("insert into %s(ranking,time,title,content,score) values('%d','%s','%s','%s','%d')",website,(i+1),time,title,content,score);
-			if(!MyJdbcUtil.insert(sql)) {
-//				System.out.println("sql执行失败："+sql);
-			}else {
-//				System.out.println("sql执行成功："+sql);
-				success++;
+			hotSearch hs=new hotSearch(time,title,content,score,i+1,website);
+			System.out.println(hs);
+			if(hotSearchService.addHotSearch(hs)) {
+			    success++;
 			}
+//			if(!MyJdbcUtil.insert(sql)) {
+////				System.out.println("sql执行失败："+sql);
+//			}else {
+////				System.out.println("sql执行成功："+sql);
+//				
+//			}
         }
-        String sql=String.format("insert into log(time,website,count) values('%s','%s','%d')",time,website,success);
-        MyJdbcUtil.insert(sql);
+//        String sql=String.format("insert into log(time,website,count) values('%s','%s','%d')",time,website,success);
+//        MyJdbcUtil.insert(sql);
+        log log=new log(time,website,success);
+        logService.addLog(log);
 //        logger.info(String.format("%s %s 成功抓取%d条",time,website,success));
-        return MyResult.getParseResult(success, "zhihu", time);
+        return MyResult.getParseResult(success, website, time);
 	}
 }

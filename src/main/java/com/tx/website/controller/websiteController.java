@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.tx.website.service.*;
 import com.tx.utils.*;
+import com.tx.website.dao.hotSearch;
 
 @RestController
 @RequestMapping("/parse")
@@ -28,9 +29,11 @@ public class websiteController {
     @Autowired
     private toutiao toutiao;
     
+    @Autowired
+    private hotSearchService hotSearchService;
+    
     @RequestMapping(value="/baidu",method=RequestMethod.GET,produces="application/json;charset=utf-8")
     public String get1() {
-//        MyMailUtil.sendSimpleMail("442329302@qq.com");
         return baidu.start();
     }
     @RequestMapping(value="/zhihu",method=RequestMethod.GET,produces="application/json;charset=utf-8")

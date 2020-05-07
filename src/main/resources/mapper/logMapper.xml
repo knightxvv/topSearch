@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tx.mybatis.mapper.logMapper">
+
+    <resultMap id="BaseResultMap" type="com.tx.log.dao.log">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="time" jdbcType="VARCHAR" property="time" />
+        <result column="website" jdbcType="VARCHAR" property="website" />
+        <result column="count" jdbcType="INTEGER" property="count" />
+    </resultMap>
+
+    
+    <insert id="addLog" useGeneratedKeys="true" keyProperty="id">
+      insert into log (time,website,count)
+      values (#{time},#{website},#{count})
+    </insert>
+</mapper>

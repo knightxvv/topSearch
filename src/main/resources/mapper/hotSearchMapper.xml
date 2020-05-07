@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tx.mybatis.mapper.hotSearchMapper">
+
+    <resultMap id="BaseResultMap" type="com.tx.website.dao.hotSearch">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="time" jdbcType="VARCHAR" property="time" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="content" jdbcType="VARCHAR" property="content" />
+        <result column="score" jdbcType="INTEGER" property="score" />
+        <result column="ranking" jdbcType="INTEGER" property="ranking" />
+    </resultMap>
+
+    <select id="getHotSearch" resultMap="BaseResultMap">
+        SELECT * FROM zhihu order by time desc limit 1
+    </select>
+    
+    <insert id="addHotSearch" useGeneratedKeys="true" keyProperty="id">
+      insert into ${website}(time,title,content,score,ranking)
+      values (#{time},#{title},#{content},#{score},#{ranking})
+    </insert>
+</mapper>
