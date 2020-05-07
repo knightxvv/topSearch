@@ -24,7 +24,7 @@ public class MyResult {
             map.put("website",website);
             map.put("time",time);
             map.put("count",String.valueOf(success));
-            logger.info(String.format("%s %-15s 抓取失败",time,website,success));
+            logger.error(String.format("%s %-15s 抓取失败",time,website,success));
         }
         return map.toString();
     }

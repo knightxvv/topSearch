@@ -48,7 +48,12 @@ public class zhihu {
         for (int i=0;i<elements.size();i++) {
 			String title=elements.get(i).select(".HotList-itemTitle").text();
 			String content=elements.get(i).select(".HotList-itemExcerpt").text();
-			int score=Integer.valueOf(elements.get(i).select(".HotList-itemMetrics").text().split("万")[0].trim());
+			int score=0;
+			try{//防止热度位置为盐选故事的情况
+			    score=Integer.valueOf(elements.get(i).select(".HotList-itemMetrics").text().split("万")[0].trim());
+			}catch(Exception e) {
+			    
+			}
 //            System.out.println("标题:" + title);
 //			System.out.println("内容:" + content);
 //			System.out.println("热度:" + score);

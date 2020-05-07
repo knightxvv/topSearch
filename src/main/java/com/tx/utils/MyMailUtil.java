@@ -38,8 +38,8 @@ public class MyMailUtil {
             logger.info(String.format("%s 成功发送至%s",time,mail));
             return true;
         }catch(Exception e){
-//            System.out.println(e.getMessage())1;
-            logger.info(String.format("%s 发送失败 %s",time,e.getMessage()));
+//            System.out.println(e.getMessage());
+            logger.error(String.format("%s 发送失败: %s",time,e.getMessage()));
             return false;
         }
     }

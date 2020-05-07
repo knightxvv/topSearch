@@ -30,7 +30,7 @@ public class websiteController {
     
     @RequestMapping(value="/baidu",method=RequestMethod.GET,produces="application/json;charset=utf-8")
     public String get1() {
-        MyMailUtil.sendSimpleMail("442329302@qq.com");
+//        MyMailUtil.sendSimpleMail("442329302@qq.com");
         return baidu.start();
     }
     @RequestMapping(value="/zhihu",method=RequestMethod.GET,produces="application/json;charset=utf-8")

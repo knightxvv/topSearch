@@ -30,9 +30,9 @@ public class MyHttpClient {
         try {
 //            httpClient = HttpClients.createDefault();
             RequestConfig requestConfig = RequestConfig.custom()
-//                    .setConnectTimeout(35000)// 连接主机服务超时时间
-//                    .setConnectionRequestTimeout(35000)// 请求超时时间
-//                    .setSocketTimeout(60000)// 数据读取超时时间
+                    .setConnectTimeout(35000)// 连接主机服务超时时间
+                    .setConnectionRequestTimeout(35000)// 请求超时时间
+                    .setSocketTimeout(60000)// 数据读取超时时间
                     .setCookieSpec(CookieSpecs.STANDARD)
                     .build();
             httpClient =HttpClients.custom()
@@ -84,9 +84,9 @@ public class MyHttpClient {
         try {
 //            httpClient = HttpClients.createDefault();
             RequestConfig requestConfig = RequestConfig.custom()
-//                    .setConnectTimeout(35000)// 连接主机服务超时时间
-//                    .setConnectionRequestTimeout(35000)// 请求超时时间
-//                    .setSocketTimeout(60000)// 数据读取超时时间
+                    .setConnectTimeout(35000)// 连接主机服务超时时间
+                    .setConnectionRequestTimeout(35000)// 请求超时时间
+                    .setSocketTimeout(60000)// 数据读取超时时间
                     .setCookieSpec(CookieSpecs.STANDARD)
                     .build();
             httpClient =HttpClients.custom()
