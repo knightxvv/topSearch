@@ -10,7 +10,7 @@
         	$('.website').click(function(){
         		var target=$(this).attr('target');
         		$.ajax({
-        			url:contextPath+'/parse/'+target,
+        			url:contextPath+'/website/parse/'+target,
         			type:'get',
         			dataType:'text',
         			async:false,

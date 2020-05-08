@@ -2,21 +2,32 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tx.mybatis.mapper.hotSearchMapper">
 
-    <resultMap id="BaseResultMap" type="com.tx.website.dao.hotSearch">
+    <resultMap id="BaseResultMap" type="com.tx.hotsearch.dao.hotSearch">
         <result column="id" jdbcType="INTEGER" property="id" />
         <result column="time" jdbcType="VARCHAR" property="time" />
         <result column="title" jdbcType="VARCHAR" property="title" />
         <result column="content" jdbcType="VARCHAR" property="content" />
         <result column="score" jdbcType="INTEGER" property="score" />
         <result column="ranking" jdbcType="INTEGER" property="ranking" />
+        <result column="playcount" jdbcType="INTEGER" property="ranking" />
+        <result column="website" jdbcType="VARCHAR" property="content" />
     </resultMap>
 
-    <select id="getHotSearch" resultMap="BaseResultMap">
-        SELECT * FROM zhihu order by time desc limit 1
+    <select id="selectHotSearch" resultMap="BaseResultMap">
+        SELECT * FROM t_hotsearch order by time desc limit 1
     </select>
     
-    <insert id="addHotSearch" useGeneratedKeys="true" keyProperty="id">
-      insert into ${website}(time,title,content,score,ranking)
-      values (#{time},#{title},#{content},#{score},#{ranking})
+    <insert id="insertHotSearch" useGeneratedKeys="true" keyProperty="id">
+      insert into t_hotsearch(time,title,content,score,ranking,playcount,website)
+      values (#{time},#{title},#{content},#{score},#{ranking},#{playcount},#{website})
+    </insert>
+    
+    <insert id="insertHotSearchOfWebsite" useGeneratedKeys="true" keyProperty="id">
+      insert into t_hotsearch(time,title,content,score,ranking,playcount,website)
+      values 
+      <foreach collection ="list" item="item" separator =",">
+            (#{item.time},#{item.title},#{item.content},#{item.score},#{item.ranking},#{item.playcount},#{item.website})
+      </foreach >
+      
     </insert>
 </mapper>

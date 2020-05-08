@@ -7,11 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import com.alibaba.fastjson.JSONObject;
+
 @Service
 public class MyResult {
     private static Logger logger = LoggerFactory.getLogger(MyResult.class);
     
-    public String getParseResult(int success,String website,String time){
+    public static String getParseResult(int success,String website,String time){
         Map<String,String> map=new HashMap<>();
         if(success>0) {
             map.put("code","1");
