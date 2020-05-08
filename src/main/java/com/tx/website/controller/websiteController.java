@@ -3,8 +3,6 @@ package com.tx.website.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,9 +11,7 @@ import com.tx.website.service.*;
 import com.tx.website.dao.*;
 import com.tx.utils.*;
 
-@RestController
-@EnableScheduling
-@RequestMapping(value="/website")
+@RestController@RequestMapping(value="/website")
 public class websiteController {
     @Autowired
     MyMailUtil MyMailUtil;
@@ -30,7 +26,6 @@ public class websiteController {
     }
     
     @RequestMapping(value="/parse/allWebsite",method=RequestMethod.GET,produces="application/json;charset=utf-8")
-    @Scheduled(cron = "0 0/10 * * * ?")
     public List<String> parseAllWebsite() {
         return websiteService.parseAllWebsite();
     }

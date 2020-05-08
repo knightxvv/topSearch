@@ -46,15 +46,16 @@ public class websiteService {
     
     @SuppressWarnings({ "static-access", "unchecked" })
     public List<String> parseWebsite(String website){
-        String url=websiteMapper.getUrlByWebsite(website);
+        website web=websiteMapper.getWebsite(website);
         int success=0;
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
         String time=df.format(new Date());// new Date()为获取当前系统时间
         List<String> results=new LinkedList<>();
-        String html=MyHttpClient.doGet(url);
+        String html=MyHttpClient.doGet(web.url,web.encoding);
         if(html==null || html.equals("")) {
             logger.error(String.format("%s %s 抓取失败:页面为空",time,website));
             results.add(MyResult.getParseResult(success, website, time));
+            return results;
         }
         //反射获取各网站的hotsearch列表
         Object obj=applicationContext.getBean(website);
@@ -76,7 +77,7 @@ public class websiteService {
     
     
     //定时爬取各网站
-    @Scheduled(cron = "* 0/10 * * * ?")
+    @Scheduled(cron = "0 0/10 * * * ?")
     @SuppressWarnings({ "static-access", "unchecked" })
     public List<String> parseAllWebsite() {
         int success=0;
@@ -86,7 +87,16 @@ public class websiteService {
         List<website> websiteList=getWebsiteList();
         for(website web:websiteList) {
             String website=web.website;
-            String html=MyHttpClient.doGet(web.url);
+            //b站每天更新一次，因此设定每6小时爬一次
+            if(website.equals("bilibili")) {
+                String hour=time.split(" ")[1].split(":")[0];
+                String min=time.split(" ")[1].split(":")[1];
+                if(!(Integer.valueOf(hour)%6==0 && Integer.valueOf(min)==0)) {
+                    continue;
+                }
+            }
+            
+            String html=MyHttpClient.doGet(web.url,web.encoding);
             if(html==null || html.equals("")) {
                 logger.error(String.format("%s %s 抓取失败:页面为空",time,website));
                 results.add(MyResult.getParseResult(success, website, time));
@@ -114,7 +124,6 @@ public class websiteService {
     public List<website> getWebsiteList(){
         List<website> list=new LinkedList<>();
         list=websiteMapper.getWebsiteList();
-//        System.out.println(list);
         return list;
     }
     

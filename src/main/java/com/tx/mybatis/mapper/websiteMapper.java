@@ -7,4 +7,6 @@ public interface websiteMapper {
     List<website> getWebsiteList();
     
     String getUrlByWebsite(String website);
+    
+    website getWebsite(String website);
 }

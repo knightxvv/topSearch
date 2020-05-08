@@ -15,11 +15,15 @@
     </insert>
     
     <select id="getWebsiteList" resultType="com.tx.website.dao.website">
-        select id,website,url from t_website
+        select * from t_website
     </select>
     
     <select id="getUrlByWebsite" resultType="String">
         select url from t_website where website=#{website}
+    </select>
+    
+    <select id="getWebsite" resultType="com.tx.website.dao.website">
+        select * from t_website where website=#{website}
     </select>
     
 </mapper>
