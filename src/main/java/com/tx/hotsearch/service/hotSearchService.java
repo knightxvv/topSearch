@@ -27,5 +27,9 @@ public class hotSearchService{
         // TODO Auto-generated method stub
         return hotSearchMapper.insertHotSearchOfWebsite(hotSearchList);
     }
+    
+    public List<hotSearch> selectLatestHotSearchByWebsite(String website){
+        return hotSearchMapper.selectLatestHotSearchByWebsite(website);
+    }
 
 }

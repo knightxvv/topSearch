@@ -8,6 +8,10 @@ public class website {
     public String url;
     public String encoding;
     
+    public website() {
+
+    }
+    
     public website(String website,String url,String encoding) {
         this.website=website;
         this.url=url;

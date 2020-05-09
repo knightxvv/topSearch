@@ -4,44 +4,132 @@
     <meta charset="UTF-8">
     <title>topSearch</title>
     <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/echarts.js"></script>
     <script type="text/javascript" src="./js/public.js"></script>
     <script>    
         $(function(){
+        	getWebsiteList();
+        	getLatest($('#websiteSelect').val());
+        	
         	$('.website').click(function(){
         		var target=$(this).attr('target');
         		$.ajax({
         			url:contextPath+'/website/parse/'+target,
         			type:'get',
         			dataType:'text',
-        			async:false,
+        			async:true,
         			success:function(data){
 //         				alert(data)
-        				$('.main').append(data+'<br>');
+                        $(JSON.parse(data)).each(function(i,x){
+                        	$('.main').append(x+'<br>');
+                        })
+        				
         			},error:function(data){
 //         				alert(JSON.stringify(data))
         			}
         		})
         	})
-        	
-//         	setInterval(function(){
-//         		$('.website').each(function(){
-//                     var target=$(this).attr('target');
-//                     $.ajax({
-//                         url:contextPath+'/parse/'+target,
-//                         type:'get',
-//                         dataType:'text',
-//                         async:false,
-//                         success:function(data){
-//     //                      alert(data)
-//                             $('.main').append(data+'<br>');
-//                         },error:function(data){
-//     //                      alert(JSON.stringify(data))
-//                         }
-//                     })
-//                 })
-//         	},1000*60*10)
-            
+        	$('#websiteSelect').change(function(){
+        		var website=$(this).val();
+        		getLatest(website);
+        	})
         });
+        
+        function getWebsiteList(){
+        	$.ajax({
+                url:contextPath+'/website/get/allWebsite',
+                type:'get',
+                dataType:'text',
+                async:false,
+                success:function(data){
+//                  alert(data)
+                    var html="";
+                    $(JSON.parse(data)).each(function(i,x){
+                        html+='<option value="'+x.website+'">'+x.website+'</option>';
+                    })
+                    $('#websiteSelect').html(html);
+                    
+                },error:function(data){
+//                  alert(JSON.stringify(data))
+                }
+            })
+        }
+        
+        function getLatest(website){
+//         	var website=$('.gc').attr('target');
+        	$.ajax({
+                url:contextPath+'/hotSearch/'+website+'/latest',
+                type:'get',
+                dataType:'text',
+                async:false,
+                success:function(data){
+//                 	alert(data)
+                    var myChart = echarts.init(document.getElementById('main'));
+                    var x=[],y=[],z=[];
+                    var time;
+                    $(JSON.parse(data)).each(function(i,item){
+                    	time=item.time;
+                    	if(i<10){
+                        	x.push(item.title);
+                        	y.push(item.score);
+                        	z.push(item.ranking);
+                    	}
+                    })
+                    // 指定图表的配置项和数据
+                    var option = {
+                    		title: {
+                                text: website+":"+time
+                            },
+                            tooltip:{
+                            	trigger: "axis",
+                                formatter: function(params) {
+//                                     console.log(JSON.stringify(params))
+                                    var res="";
+                                    res+="排名:"+params[0].name+"<br>热度:"+params[0].data+"<br>主题:"+x[params[0].name-1];
+//                                     return '<div style="width:100px;overflow-y:auto;">'+res+'</div>';
+                                    return res;
+                                },
+                                axisPointer: {
+                                    type: 'line'
+                                },
+//                                 extraCssText:'width:100px;'
+                            },
+                    	    xAxis: {
+                    	        type: 'value',
+//                     	        data: y
+                    	    },
+                    	    yAxis: {
+                    	        type: 'category',
+//                     	        name:'排名',
+                    	        data:z,
+                    	        inverse: true,
+                    	        interval:1,
+                    	        axisTick: {show: false},
+                    	    },
+                    	    series: [{
+                    	        data: y,
+                    	        type: 'bar',
+//                     	        name:'排名',
+//                     	        itemStyle: {
+                                label: {
+                                	normal: {
+                                        show: true, //开启显示
+                                        position: 'right', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: 'black',
+                                            fontSize: 3
+                                        }
+                                    }
+                                }
+                            }]
+                    	};
+                    myChart.setOption(option);
+                    
+                },error:function(data){
+//                  alert(JSON.stringify(data))
+                }
+            })
+        }
         
     </script>
 </head>
@@ -54,11 +142,16 @@
         <input class="website" type="button" value="贴吧" target="tieba" onclick="">
         <input class="website" type="button" value="抖音" target="douyin" onclick="">
         <input class="website" type="button" value="头条" target="toutiao" onclick="">
+        <select id="websiteSelect">
+        </select>
     </div>    
     
-    <div class='main' style="width:960px;height:540px;margin:auto;position:absolute;border:1px solid #000;box-sizing:border-box;">
+    <div class='main' style="width:500px;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
     
     </div>
+    <div id="main" style="width: 1000px;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
+    </div>
+    
 
 </body>
 </html>
