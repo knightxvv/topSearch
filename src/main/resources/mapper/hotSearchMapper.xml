@@ -34,6 +34,20 @@
         SELECT * FROM t_hotsearch 
         where time=(select distinct(time) from t_hotsearch where website=#{website} order by time desc limit 1 ) 
         and website=#{website}
-        
+    </select>
+    
+    <select id="selectLatestHotSearchByWebsiteTopN" resultMap="BaseResultMap">
+        SELECT * FROM t_hotsearch 
+        where time=(select distinct(time) from t_hotsearch where website=#{website} order by time desc limit 1 ) 
+        and website=#{website} order by ranking limit #{count}
+    </select>
+    
+    <select id="searchTitleByKeyword" resultType="java.util.HashMap">
+        SELECT distinct(title),website FROM t_hotsearch where title like CONCAT('%',#{keyword},'%');
+    </select>
+    
+    <select id="selectHotSearchByTitle" resultMap="BaseResultMap">
+        SELECT * FROM t_hotsearch 
+        where title=#{title} and website=#{website} order by time
     </select>
 </mapper>

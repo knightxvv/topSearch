@@ -6,6 +6,25 @@
     <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="./js/echarts.js"></script>
     <script type="text/javascript" src="./js/public.js"></script>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        .searchResult{
+            width:80%;
+            word-wrap:break-word;
+            float:left;
+            border:1px solid #000;
+            margin: 0 0 -1px -1px;
+            cursor:pointer;
+        }
+        .searchResultWebsite{
+            width:20%;
+            word-wrap:break-word;
+            float:left;
+        }
+    </style>
+    
     <script>    
         $(function(){
         	getWebsiteList();
@@ -33,11 +52,21 @@
         		var website=$(this).val();
         		getLatest(website);
         	})
+        	$('#websiteSelectCount').change(function(){
+                var website=$('#websiteSelect').val();
+                getLatest(website);
+            })
+            $(document).on('click','.searchResult',function(){
+                var title=$(this).text();
+                var website=$(this).next().text();
+                searchByTitle(title,website);
+            })
         });
         
         function getWebsiteList(){
+
         	$.ajax({
-                url:contextPath+'/website/get/allWebsite',
+                url:contextPath+'/website/get/allWebsite/',
                 type:'get',
                 dataType:'text',
                 async:false,
@@ -57,23 +86,25 @@
         
         function getLatest(website){
 //         	var website=$('.gc').attr('target');
+            var chooseCount="";
+            if($('#websiteSelectCount').val()!=0){
+                chooseCount=$('#websiteSelectCount').val();
+            }
         	$.ajax({
-                url:contextPath+'/hotSearch/'+website+'/latest',
+                url:contextPath+'/hotSearch/'+website+'/latest/'+chooseCount,
                 type:'get',
                 dataType:'text',
                 async:false,
                 success:function(data){
 //                 	alert(data)
-                    var myChart = echarts.init(document.getElementById('main'));
+                    var myChart = echarts.init(document.getElementById('chart1'));
                     var x=[],y=[],z=[];
                     var time;
                     $(JSON.parse(data)).each(function(i,item){
                     	time=item.time;
-                    	if(i<10){
-                        	x.push(item.title);
-                        	y.push(item.score);
-                        	z.push(item.ranking);
-                    	}
+                    	x.push(item.title);
+                    	y.push(item.score);
+                    	z.push(item.ranking);
                     })
                     // 指定图表的配置项和数据
                     var option = {
@@ -110,7 +141,6 @@
                     	        data: y,
                     	        type: 'bar',
 //                     	        name:'排名',
-//                     	        itemStyle: {
                                 label: {
                                 	normal: {
                                         show: true, //开启显示
@@ -130,6 +160,105 @@
                 }
             })
         }
+        	
+        function search(){
+        	var keyword=$('.keyword').val();
+        	if(keyword=="") return;
+        	$.ajax({
+                url:contextPath+'/hotSearch/search/'+keyword,
+                type:'get',
+                dataType:'text',
+                async:false,
+                success:function(data){
+//                  alert(data)
+                    var html="";
+                    $(JSON.parse(data)).each(function(i,x){
+                        html+='<div class="searchResult">'+x.title+'</div>'+'<div class="searchResultWebsite">'+x.website+'</div>';
+                    })
+                    $('.left').html(html);
+                }
+            })
+    	}
+        
+        function searchByTitle(title,website){
+        	$.ajax({
+                url:contextPath+'/hotSearch/search/title/',
+                data:{title:title,website:website},
+                type:'get',
+                dataType:'text',
+                async:false,
+                success:function(data){
+//                     alert(data)
+                    var myChart = echarts.init(document.getElementById('chart2'));
+                    var x=[],y=[],z=[];
+                    $(JSON.parse(data)).each(function(i,item){
+                        x.push(item.score);
+                        y.push(item.ranking);
+                        z.push(item.time);
+                    })
+                    // 指定图表的配置项和数据
+                    var option = {
+                            title: {
+                                text: website+"  "+title
+                            },
+                            tooltip:{
+                                trigger: "axis",
+                                axisPointer: {
+                                    type: 'line'
+                                },
+                            },
+                            xAxis: {
+                            	type: 'category',
+                                data:z,
+                                axisTick: {show: false},
+                            },
+                            yAxis: [{
+                            	type: 'value',
+                            	name:'热度'
+                            },{
+                                type: 'value',
+                                name:'排名',
+                                min: 0,
+                                max: 100,
+                                interval: 10,
+                                inverse:true
+                            }],
+                            series: [{
+                                data: x,
+                                type: 'line',
+                                name:'热度',
+                                yAxisIndex: 0,
+                                label: {
+                                    normal: {
+                                        show: true, //开启显示
+                                        position: 'top', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: 'black',
+                                            fontSize: 3
+                                        }
+                                    }
+                                }
+                            },{
+                                data: y,
+                                type: 'line',
+                                name:'排名',
+                                yAxisIndex: 1,
+                                label: {
+                                    normal: {
+                                        show: true, //开启显示
+                                        position: 'top', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: 'black',
+                                            fontSize: 3
+                                        }
+                                    }
+                                }
+                            }]
+                        };
+                    myChart.setOption(option);
+                }
+            })
+        }
         
     </script>
 </head>
@@ -144,14 +273,34 @@
         <input class="website" type="button" value="头条" target="toutiao" onclick="">
         <select id="websiteSelect">
         </select>
+        <select id="websiteSelectCount">
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='3'>3</option>
+            <option value='5'>5</option>
+            <option value='10'>10</option>
+            <option value='20'>20</option>
+        </select>
     </div>    
-    
-    <div class='main' style="width:500px;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
-    
+    <div style='width:1900px;height:540px;float:left;box-sizing:border-box;overflow:auto;'>
+        <div class='main' style="width:500px;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
+        
+        </div>
+        <div id="chart1" style="width: 1000px;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
+        </div>
     </div>
-    <div id="main" style="width: 1000px;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
-    </div>
     
+    <div style="margin:10px 0 10px 0;width:100%;height:20px;float:left;">
+        <input class="keyword" type="text" onclick="">
+        <input class="search" type="button" onclick="search()" value="搜索">
+    </div>   
+    <div style='width:1900px;height:540px;float:left;box-sizing:border-box;overflow:auto;'>
+        <div class='left' style="width:500px;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
+        
+        </div>
+        <div class='right' id="chart2" style="width: 1000px;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
+        </div>
+    </div>
 
 </body>
 </html>
