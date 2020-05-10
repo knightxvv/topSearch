@@ -29,7 +29,13 @@ public interface hotSearchMapper {
     //以keyword搜索来获取标题和网站
     List<HashMap<String,Object>> searchTitleByKeyword(String keyword);
     
-    //以特定标题和网站（不同网站可能有相同的热搜）来获取所有热搜，按时间升序
+    //以特定标题和网站（不同网站可能有相同的热搜）来获取热搜
     List<hotSearch> selectHotSearchByTitle(String title,String website);
+    
+    //获取某一天的时间轴，格式如下12:00:00
+    List<String> selectTimeListByDate(String date,String website);
+    
+    //以特定日期（年月日）和网站（不同网站可能有相同的热搜）和排名来获取热搜
+    List<hotSearch> selectHotSearchByDate(String date,String website,int topN);
     
 }

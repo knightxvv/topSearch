@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>topSearch</title>
     <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="./js/echarts.js"></script>
+    <script type="text/javascript" src="./js/echarts.min.js"></script>
     <script type="text/javascript" src="./js/public.js"></script>
     <style>
         *{
@@ -23,13 +23,17 @@
             word-wrap:break-word;
             float:left;
         }
+        
+        span.emphasis{
+            color:red;
+        }
     </style>
     
     <script>    
         $(function(){
         	getWebsiteList();
         	getLatest($('#websiteSelect').val());
-        	
+        	searchdate();
         	$('.website').click(function(){
         		var target=$(this).attr('target');
         		$.ajax({
@@ -38,10 +42,10 @@
         			dataType:'text',
         			async:true,
         			success:function(data){
-//         				alert(data)
-                        $(JSON.parse(data)).each(function(i,x){
-                        	$('.main').append(x+'<br>');
-                        })
+        				alert(data)
+//                         $(JSON.parse(data)).each(function(i,x){
+//                         	$('.main').append(x+'<br>');
+//                         })
         				
         			},error:function(data){
 //         				alert(JSON.stringify(data))
@@ -51,10 +55,12 @@
         	$('#websiteSelect').change(function(){
         		var website=$(this).val();
         		getLatest(website);
+        		searchdate();
         	})
         	$('#websiteSelectCount').change(function(){
                 var website=$('#websiteSelect').val();
                 getLatest(website);
+                searchdate();
             })
             $(document).on('click','.searchResult',function(){
                 var title=$(this).text();
@@ -153,7 +159,7 @@
                                 }
                             }]
                     	};
-                    myChart.setOption(option);
+                    myChart.setOption(option,true);
                     
                 },error:function(data){
 //                  alert(JSON.stringify(data))
@@ -173,7 +179,8 @@
 //                  alert(data)
                     var html="";
                     $(JSON.parse(data)).each(function(i,x){
-                        html+='<div class="searchResult">'+x.title+'</div>'+'<div class="searchResultWebsite">'+x.website+'</div>';
+                    	var tmp=x.title.replace(new RegExp(keyword,"gm"),'<span class="emphasis">'+keyword+'</span>')
+                        html+='<div class="searchResult">'+tmp+'</div>'+'<div class="searchResultWebsite">'+x.website+'</div>';
                     })
                     $('.left').html(html);
                 }
@@ -255,7 +262,96 @@
                                 }
                             }]
                         };
-                    myChart.setOption(option);
+                    myChart.setOption(option,true);
+                }
+            })
+        }
+        
+        function searchdate(){
+        	var date=$('.date').val();
+        	var website=$('#websiteSelect').val();
+        	var topN=$('#websiteSelectCount').val();
+        	if(topN==0) topN=3;
+        	var timelist="";
+        	$.ajax({
+                url:contextPath+'/hotSearch/get/timelist',
+                type:'get',
+                data:{date:date,website:website},
+                dataType:'text',
+                async:false,
+                success:function(data){
+//                 	alert(data)
+                    timelist=JSON.parse(data)
+                }
+            })
+            $.ajax({
+                url:contextPath+'/hotSearch/search/date',
+                type:'get',
+                data:{date:date,website:website,topN:topN},
+                dataType:'text',
+                async:false,
+                success:function(data){
+//                 	alert(data)
+                	var myChart = echarts.init(document.getElementById('chart3'));
+                    var multiseries=[];
+                    var legend=[];
+                    $(JSON.parse(data)).each(function(i,item){
+                    	var x=[];
+                    	legend.push('排名'+(i+1))
+                    	$(item).each(function(j,sin){
+                            x.push(sin.score);
+                        })
+                        multiseries.push({
+                            data: x,
+                            type: 'line',
+                            name:'排名'+(i+1),
+                        });
+                    })
+//                     console.log(multiseries.length)
+                    // 指定图表的配置项和数据
+                    var option = {
+                            title: {
+                                text: ""
+                            },
+                            tooltip:{
+                                trigger: "axis",
+                                axisPointer: {
+                                    type: 'line'
+                                },
+                                formatter: function (params,ticket,callback) {
+//                                 	console.log(JSON.stringify(params))
+                                	var res="";
+                                	res+=params[0].name+'<br>';
+                                	$(params).each(function(i,x){
+                                		res+=x.marker+x.seriesName+":"+x.data+'<br>';
+                                	})
+                                	
+                                	var index=params[0].dataIndex;
+                                	var html="";
+                                	$(JSON.parse(data)).each(function(i,item){
+                                        html+="排名"+item[index].ranking+"<br>"+item[index].title+'<br><br>';
+                                    })
+//                                     console.log(html)
+                                    $('#titlelist').html(html);
+                                	return res;
+                                }
+                            },
+                            legend:{
+                            	data:legend
+                            },
+                            xAxis: {
+                                type: 'category',
+                                data:timelist,
+                                axisTick: {show: false},
+                                triggerEvent: true,
+                            },
+                            yAxis: [{
+                                type: 'value',
+                                name:'热度'
+                            }],
+                            series: multiseries
+                        };
+                    myChart.setOption(option,true);
                 }
             })
         }
@@ -281,20 +377,29 @@
             <option value='10'>10</option>
             <option value='20'>20</option>
         </select>
+        <input class="date" type="text" value="2020-05-09" onclick="">
+        <input class="searchdate" type="button" onclick="searchdate()" value="搜索">
     </div>    
-    <div style='width:1900px;height:540px;float:left;box-sizing:border-box;overflow:auto;'>
-        <div class='main' style="width:500px;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
+    <div style='width:100%;height:540px;float:left;box-sizing:border-box;overflow:auto;'>
+        <div id='chart3' style="width:40%;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
         
         </div>
-        <div id="chart1" style="width: 1000px;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
+        
+        <div id="titlelist" style='width:20%;height:540px;border:1px solid #000;float:left;box-sizing:border-box;overflow:auto;'>
+        
+        </div>
+        
+        <div id="chart1" style="width: 40%;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
         </div>
     </div>
+    
+    
     
     <div style="margin:10px 0 10px 0;width:100%;height:20px;float:left;">
         <input class="keyword" type="text" onclick="">
         <input class="search" type="button" onclick="search()" value="搜索">
     </div>   
-    <div style='width:1900px;height:540px;float:left;box-sizing:border-box;overflow:auto;'>
+    <div style='width:100%;height:540px;float:left;box-sizing:border-box;overflow:auto;'>
         <div class='left' style="width:500px;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
         
         </div>

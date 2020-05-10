@@ -1,5 +1,6 @@
 package com.tx.hotsearch.service;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -49,5 +50,26 @@ public class hotSearchService{
     public List<hotSearch> selectHotSearchByTitle(String title,String website){
         List<hotSearch> list=hotSearchMapper.selectHotSearchByTitle(title,website);
         return list;
+    }
+    
+    public List<String> selectTimeListByDate(String date,String website){
+        List<String> list=hotSearchMapper.selectTimeListByDate(date,website);
+        return list;
+    }
+    
+    public List<List<hotSearch>> selectHotSearchByDate(String date,String website,int topN){
+        List<hotSearch> list=new LinkedList<>();
+        list=hotSearchMapper.selectHotSearchByDate(date, website, topN);
+        List<List<hotSearch>> res=new LinkedList<>();
+        for(int i=1;i<=topN;i++) {
+            List<hotSearch> tmp=new LinkedList<>();
+            for(hotSearch h:list) {
+                if(h.ranking==i) {
+                    tmp.add(h);
+                }
+            }
+            res.add(tmp);
+        }
+        return res;
     }
 }

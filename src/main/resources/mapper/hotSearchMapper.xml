@@ -50,4 +50,12 @@
         SELECT * FROM t_hotsearch 
         where title=#{title} and website=#{website} order by time
     </select>
+    
+    <select id="selectTimeListByDate" resultType="java.lang.String">
+        SELECT distinct(DATE_FORMAT(time,'%H:%i:%S')) as time FROM t_hotsearch where DATE_FORMAT(time,'%Y-%m-%d')=#{date} and website=#{website} order by time
+    </select>
+    
+    <select id="selectHotSearchByDate" resultMap="BaseResultMap">
+        SELECT * FROM t_hotsearch where DATE_FORMAT(time,'%Y-%m-%d')=#{date} and website=#{website} and ranking &lt;=#{topN};
+    </select>
 </mapper>

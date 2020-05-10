@@ -39,4 +39,16 @@ public class hotSearchController {
     public List<hotSearch> selectHotSearchByTitle(@RequestParam("title") String title,@RequestParam("website") String website) {
         return hotSearchService.selectHotSearchByTitle(title,website);
     }
+    
+    @RequestMapping(value="/get/timelist",method=RequestMethod.GET,produces="application/json;charset=utf-8")
+    public List<String> selectTimeListByDate(@RequestParam("date") String date,@RequestParam("website") String website) {
+        return hotSearchService.selectTimeListByDate(date,website);
+    }
+    
+    @RequestMapping(value="/search/date",method=RequestMethod.GET,produces="application/json;charset=utf-8")
+    public List<List<hotSearch>> selectHotSearchByDate(@RequestParam("date") String date,
+            @RequestParam("website") String website,
+            @RequestParam("topN") int topN) {
+        return hotSearchService.selectHotSearchByDate(date,website,topN);
+    }
 }
