@@ -46,7 +46,6 @@
 <!--         SELECT distinct(title),website FROM t_hotsearch where title like CONCAT('%',#{keyword},'%'); -->
         SELECT distinct(t.title) as title,t.website,DATE_FORMAT(max(t.time),'%Y-%m-%d %H:%i:%S') as time,w.name 
         FROM t_hotsearch t join t_website w where t.title like CONCAT('%',#{keyword},'%') and t.website=w.website group by title order by time;
-        
     </select>
     
     <select id="selectHotSearchByTitle" resultMap="BaseResultMap">
@@ -60,5 +59,11 @@
     
     <select id="selectHotSearchByDate" resultMap="BaseResultMap">
         SELECT * FROM t_hotsearch where DATE_FORMAT(time,'%Y-%m-%d')=#{date} and website=#{website} and ranking &lt;=#{topN};
+    </select>
+    
+    <select id="getDetailOfHotSearch" resultType="java.util.HashMap">
+        SELECT max(score) as maxScore,min(score) as minScore,max(ranking) as minRanking,min(ranking) as maxRanking,cast(avg(score) as DECIMAL(10,0)) as avgScore,
+            DATE_FORMAT(min(time),'%Y-%m-%d %H:%i:%S') as minTime 
+        FROM t_hotsearch where title=#{title} and website=#{website};
     </select>
 </mapper>

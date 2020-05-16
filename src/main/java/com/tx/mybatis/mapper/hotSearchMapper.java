@@ -37,4 +37,6 @@ public interface hotSearchMapper {
     //以特定日期（年月日）和网站（不同网站可能有相同的热搜）和排名来获取热搜
     List<hotSearch> selectHotSearchByDate(String date,String website,int topN);
     
+    //按标题获取热搜的详细信息，最高最低排名、热度、时间等
+    HashMap<String,Object> getDetailOfHotSearch(String title,String website);
 }

@@ -71,4 +71,10 @@ public class hotSearchService{
         }
         return res;
     }
+    
+    public HashMap<String,Object> getDetailOfHotSearch(String title,String website){
+        HashMap<String,Object> map=new HashMap<>();
+        map=hotSearchMapper.getDetailOfHotSearch(title, website);
+        return map;
+    }
 }

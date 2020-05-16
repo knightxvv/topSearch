@@ -50,4 +50,10 @@ public class hotSearchController {
             @RequestParam("topN") int topN) {
         return hotSearchService.selectHotSearchByDate(date,website,topN);
     }
+    
+    @RequestMapping(value="/get/detail",method=RequestMethod.GET,produces="application/json;charset=utf-8")
+    public HashMap<String, Object> getDetailOfHotSearch(@RequestParam("title") String title,
+            @RequestParam("website") String website) {
+        return hotSearchService.getDetailOfHotSearch(title,website);
+    }
 }

@@ -10,46 +10,120 @@
         *{
             box-sizing:border-box;
         }
-        .searchResultTime{
+        .searchItem{
+            width:100%;
+            margin:5px 0% 5px 0%;
+            min-height:45px;
+            display:inline-block;
+        }
+        .searchItem .searchItemTime{
             width:30%;
-            height:60px;
+            height:100%;
             text-align:center;
             word-wrap:break-word;
             float:left;
-            border:1px solid #000;
-            margin: 0 0 -1px -1px;
+            display:inline-block;
             cursor:pointer;
+            min-height:45px;
+            padding-top:5px;
         }
-        .searchResult{
-            width:60%;
-            height:60px;
+        .searchItem .searchItemTitle{
+            width:55%;
+            height:100%;
             word-wrap:break-word;
             float:left;
-            border:1px solid #000;
-            margin: 0 0 -1px -1px;
             cursor:pointer;
-        }
-        .searchResultWebsite{
-            width:10%;
-            height:60px;
+            min-height:45px;
+            display:inline-block;
             text-align:center;
-            border:1px solid #000;
+            padding-top:5px;
+        }
+        .searchItem .searchItemTitle p{
+            display: inline-block;
+            margin: auto;
+            text-align: justify;
+        }
+        .searchItem .searchItemWebsite{
+            width:15%;
+            height:100%;
+            text-align:center;
             word-wrap:break-word;
             float:left;
+            min-height:45px;
+            display:inline-block;
+            padding-top:5px;
+        }
+        
+        .rankItem{
+            width:90%;
+            margin:5px 5% 5px 5%;
+            min-height:45px;
+            display:inline-block;
+        }
+        .rankItem .rankItemRanking{
+            float:left;
+            height:100%;
+            min-height:45px;
+            position:relative;
+            width:15%;
+            display:inline-block;
+        }
+        .rankItem .rankItemRanking .rankItemRankingCircle{
+            height:25px;
+            width:25px;
+            line-height:25px;
+            border-radius:50%;
+            background-color:#f3c68e;
+            margin:0px 0 0 10px;
+            position:absolute;
+            text-align:center;
+        }
+        .rankItem .rankItemTitle{
+            float:left;
+            height:100%;
+            min-height:45px;
+            position:relative;
+            width:85%;
+            word-wrap:break-word;
+            display:inline-block;
+            cursor:pointer;
         }
         
         span.emphasis{
             color:red;
         }
+        
+        .extension{
+            position:absolute;
+            width:150px;
+            height:150px;
+            word-wrap:break-word;
+            display:inline-block;
+            border:1px solid #000;
+            display:none; 
+            z-index:111;
+            background-color:#f3c68e;
+            top:0;
+            left:0;
+        }
+        .extension ul{
+            padding:0;
+        }
+        .extension li{
+            list-style-type:none;
+        }
     </style>
     
     <script>    
         $(function(){
+        	$('body').css('visibility','hidden');
         	$('.baseDiv').height($(window).height())
         	$('.baseDiv').width($(window).width())
         	$('.baseDiv').css('padding','3px 3px 3px 3px')
         	$('.page-content').width($('.baseDiv').width())
         	$('.page-content').height($('.baseDiv').height()-60)
+        	
+        	
         	
         	var day = new Date();
         	var y=day.getFullYear();
@@ -87,17 +161,55 @@
                 getLatest(website);
                 searchdate();
             })
-            $(document).on('click','.searchResult',function(){
+            $(document).on('click','.searchItemTitle',function(){
                 var title=$(this).text();
                 var website=$(this).next().attr('website');
                 searchByTitle(title,website);
             })
             
-            $(document).on('click','.title-nav',function(){
-                var title=$(this).text();
+            $(document).on('click','.rankItem',function(){
+                var title=$(this).find('.rankItemTitle').text();
                 $('.keyword').val(title)
                 search();
             })
+            $(document).on('mouseover','.rankItem',function(e){
+            	$('.rankItem').find('.rankItemRankingCircle').css('background-color','#f3c68e');
+            	$(this).find('.rankItemRankingCircle').css('background-color','red');
+            	
+            	var top=$(this).offset().top;
+            	var left=$(this).offset().left;
+                var title=$(this).find('.rankItemTitle').text();
+                var website=$('#websiteSelect').val();
+                $('.extension').show();
+                if($(window).height()-top<$('.extension').height()+20){
+                	$('.extension').css('top',top-$('.extension').height()).css('left',left-$('.extension').width());
+                }else{
+                    $('.extension').css('top',top).css('left',left-$('.extension').width());
+                }
+                $.ajax({
+                    url:contextPath+'/hotSearch/get/detail',
+                    type:'get',
+                    data:{title:title,website:website},
+                    dataType:'text',
+                    async:false,
+                    success:function(data){
+                    	   data=JSON.parse(data);
+                           var html="";
+                           html+='<li>最高排名：'+data.maxRanking+'</li>';
+                           html+='<li>最低排名：'+data.minRanking+'</li>';
+                    	   html+='<li>最高热度：'+data.maxScore+'</li>';
+                    	   html+='<li>最低热度：'+data.minScore+'</li>';
+                    	   html+='<li>平均热度：'+data.avgScore+'</li>';
+                    	   html+='<li>首次上榜：'+data.minTime+'</li>';
+                    	   $('.extension ul').html(html);
+                    }
+                })
+            }).on('mouseout',function(e){
+            	$('.rankItem').find('.rankItemRankingCircle').css('background-color','#f3c68e');
+            	$('.extension').hide();
+            })
+            
+            $('body').css('visibility','visible');
         });
         
         function getWebsiteList(){
@@ -144,7 +256,9 @@
                     	x.push(item.title);
                     	y.push(item.score);
                     	z.push(item.ranking);
-                        html+="排名"+item.ranking+"<br>"+'<div class="title-nav">'+item.title+'</div><br><br>';
+//                         html+="排名"+item.ranking+"<br>"+'<div class="title-nav">'+item.title+'</div><br><br>';
+                        html+='<div class="rankItem"><div class="rankItemRanking"><div class="rankItemRankingCircle">'+item.ranking+
+                            '</div></div><div class="rankItemTitle">'+item.title+'</div></div>'
                     })
                     $('#titlelist').html(html);
                     // 指定图表的配置项和数据
@@ -214,13 +328,17 @@
 //                  alert(data)
                     var html="";
                     $(JSON.parse(data)).each(function(i,x){
-                    	var tmp=x.title.replace(new RegExp(keyword,"gm"),('<span class="emphasis">'+keyword+'</span>'));
-                        html='<div class="searchResultTime">'+x.time+'</div><div class="searchResult">'+tmp+'</div>'+'<div class="searchResultWebsite" website="'+x.website+'">'+x.name+'</div>'
+                    	var tmp=x.title.replace(keyword,'<span class="emphasis">'+keyword+'</span>');
+//                     	alert(tmp)
+                        html='<div class="searchItem"><div class="searchItemTime">'+x.time+'</div><div class="searchItemTitle"><p>'+tmp+'</p></div>'+'<div class="searchItemWebsite" website="'+x.website+'">'+x.name+'</div></div>'
                              +html;
                     })
                     $('.left').html(html);
                     $('.part1').hide();
                     $('.part2').show();
+                    echarts.init(document.getElementById('chart2')).dispose();
+                    console.log($(document).find('.searchItem').eq(0))
+                    $(document).find('.searchItemTitle').eq(0).click();
                 }
             })
     	}
@@ -307,6 +425,7 @@
         }
         
         function searchdate(){
+        	$('.keyword').val('')
         	var date=$('.date').val();
         	var website=$('#websiteSelect').val();
         	var topN=$('#websiteSelectCount').val();
@@ -368,7 +487,9 @@
                                 	var index=params[0].dataIndex;
                                 	var html="";
                                 	$(JSON.parse(data)).each(function(i,item){
-                                        html+="排名"+item[index].ranking+"<br>"+'<div class="title-nav">'+item[index].title+'</div><br><br>';
+//                                         html+="排名"+item[index].ranking+"<br>"+'<div class="title-nav">'+item[index].title+'</div><br><br>';
+                                        html+='<div class="rankItem"><div class="rankItemRanking"><div class="rankItemRankingCircle">'+item[index].ranking+
+                                        '</div></div><div class="rankItemTitle">'+item[index].title+'</div></div>'
                                     })
 //                                     console.log(html)
                                     $('#titlelist').html(html);
@@ -399,8 +520,8 @@
         
     </script>
 </head>
-<body style="margin:0;padding:0;">
-    <div class='baseDiv' style="">
+<body style="margin:0;padding:0;visibility:hidden">
+    <div class='baseDiv' style="z-index:10;">
         <div class='header' style="width:100%;height:60px;">
             <input class="website" type="button" value="知乎" target="zhihu" onclick="">
             <input class="website" type="button" value="百度" target="baidu" onclick="">
@@ -428,15 +549,15 @@
         </div>    
         <div class='page-content' style='float:left;box-sizing:border-box;position:relative;'>
             <div class='part1' style="width:100%;height:100%;float:left;position:absolute;">
-                <div id='chart3' style="width:39%;height:540px;float:left;border:1px solid #000;box-sizing:border-box;">
+                <div id='chart3' style="width:40%;height:100%;float:left;border:1px solid #000;box-sizing:border-box;">
                 
                 </div>
                 
-                <div id="titlelist" style='width:20%;height:540px;border:1px solid #000;float:left;box-sizing:border-box;overflow:auto;'>
+                <div id="titlelist" style='width:30%;height:100%;border:1px solid #000;float:left;box-sizing:border-box;overflow:auto;'>
                 
                 </div>
                 
-                <div id="chart1" style="width: 39%;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
+                <div id="chart1" style="width: 30%;height:100%;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
                 </div>
             </div>
             
@@ -448,6 +569,10 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class='extension' >
+        <ul></ul>
     </div>
 
 </body>
