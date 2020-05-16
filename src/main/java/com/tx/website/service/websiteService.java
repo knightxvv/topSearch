@@ -66,8 +66,12 @@ public class websiteService {
             return results;
         }
         //写入数据库
-        if(hotSearchService.insertHotSearchOfWebsite(hotSearchList)) {
-            success=hotSearchList.size();
+        try {
+            if(hotSearchService.insertHotSearchOfWebsite(hotSearchList)) {
+                success=hotSearchList.size();
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
         }
         results.add(MyResult.getParseResult(success, website, time));
         log log=new log(time,website,success);
@@ -87,11 +91,11 @@ public class websiteService {
         List<website> websiteList=getWebsiteList();
         for(website web:websiteList) {
             String website=web.website;
-            //b站每天更新一次，因此设定每6小时爬一次
+            //b站每天更新一次，因此设定每3小时爬一次
             if(website.equals("bilibili")) {
                 String hour=time.split(" ")[1].split(":")[0];
                 String min=time.split(" ")[1].split(":")[1];
-                if(!(Integer.valueOf(hour)%6==0 && Integer.valueOf(min)==0)) {
+                if(!(Integer.valueOf(hour)%3==0 && Integer.valueOf(min)==0)) {
                     continue;
                 }
             }
@@ -111,8 +115,12 @@ public class websiteService {
                 results.add(MyResult.getParseResult(success, website, time));
                 continue;
             }
-            if(hotSearchService.insertHotSearchOfWebsite(hotSearchList)) {
-                success=hotSearchList.size();
+            try {
+                if(hotSearchService.insertHotSearchOfWebsite(hotSearchList)) {
+                    success=hotSearchList.size();
+                }
+            }catch(Exception e) {
+                e.printStackTrace();
             }
             results.add(MyResult.getParseResult(success, website, time));
             log log=new log(time,website,success);

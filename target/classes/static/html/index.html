@@ -10,8 +10,19 @@
         *{
             box-sizing:border-box;
         }
+        .searchResultTime{
+            width:30%;
+            height:60px;
+            text-align:center;
+            word-wrap:break-word;
+            float:left;
+            border:1px solid #000;
+            margin: 0 0 -1px -1px;
+            cursor:pointer;
+        }
         .searchResult{
-            width:80%;
+            width:60%;
+            height:60px;
             word-wrap:break-word;
             float:left;
             border:1px solid #000;
@@ -19,7 +30,10 @@
             cursor:pointer;
         }
         .searchResultWebsite{
-            width:20%;
+            width:10%;
+            height:60px;
+            text-align:center;
+            border:1px solid #000;
             word-wrap:break-word;
             float:left;
         }
@@ -31,6 +45,17 @@
     
     <script>    
         $(function(){
+        	$('.baseDiv').height($(window).height())
+        	$('.baseDiv').width($(window).width())
+        	$('.baseDiv').css('padding','3px 3px 3px 3px')
+        	$('.page-content').width($('.baseDiv').width())
+        	$('.page-content').height($('.baseDiv').height()-60)
+        	
+        	var day = new Date();
+        	var y=day.getFullYear();
+        	var m=day.getMonth()+1<10?'0'+(day.getMonth()+1):day.getMonth()+1;
+        	var d=day.getDate()
+        	$('.date').val( y+"-" + m + "-" + d);
         	getWebsiteList();
         	getLatest($('#websiteSelect').val());
         	searchdate();
@@ -64,8 +89,14 @@
             })
             $(document).on('click','.searchResult',function(){
                 var title=$(this).text();
-                var website=$(this).next().text();
+                var website=$(this).next().attr('website');
                 searchByTitle(title,website);
+            })
+            
+            $(document).on('click','.title-nav',function(){
+                var title=$(this).text();
+                $('.keyword').val(title)
+                search();
             })
         });
         
@@ -80,9 +111,10 @@
 //                  alert(data)
                     var html="";
                     $(JSON.parse(data)).each(function(i,x){
-                        html+='<option value="'+x.website+'">'+x.website+'</option>';
+                        html+='<option value="'+x.website+'">'+x.name+'</option>';
                     })
                     $('#websiteSelect').html(html);
+                    $('#websiteSelect option:first').prop('selected', 'selected');
                     
                 },error:function(data){
 //                  alert(JSON.stringify(data))
@@ -106,16 +138,19 @@
                     var myChart = echarts.init(document.getElementById('chart1'));
                     var x=[],y=[],z=[];
                     var time;
+                    var html="";
                     $(JSON.parse(data)).each(function(i,item){
                     	time=item.time;
                     	x.push(item.title);
                     	y.push(item.score);
                     	z.push(item.ranking);
+                        html+="排名"+item.ranking+"<br>"+'<div class="title-nav">'+item.title+'</div><br><br>';
                     })
+                    $('#titlelist').html(html);
                     // 指定图表的配置项和数据
                     var option = {
                     		title: {
-                                text: website+":"+time
+                                text: $("#websiteSelect").find("option:selected").text()+":"+time
                             },
                             tooltip:{
                             	trigger: "axis",
@@ -171,7 +206,7 @@
         	var keyword=$('.keyword').val();
         	if(keyword=="") return;
         	$.ajax({
-                url:contextPath+'/hotSearch/search/'+keyword,
+                url:contextPath+'/hotSearch/search/keyword/?keyword='+keyword,
                 type:'get',
                 dataType:'text',
                 async:false,
@@ -179,10 +214,13 @@
 //                  alert(data)
                     var html="";
                     $(JSON.parse(data)).each(function(i,x){
-                    	var tmp=x.title.replace(new RegExp(keyword,"gm"),'<span class="emphasis">'+keyword+'</span>')
-                        html+='<div class="searchResult">'+tmp+'</div>'+'<div class="searchResultWebsite">'+x.website+'</div>';
+                    	var tmp=x.title.replace(new RegExp(keyword,"gm"),('<span class="emphasis">'+keyword+'</span>'));
+                        html='<div class="searchResultTime">'+x.time+'</div><div class="searchResult">'+tmp+'</div>'+'<div class="searchResultWebsite" website="'+x.website+'">'+x.name+'</div>'
+                             +html;
                     })
                     $('.left').html(html);
+                    $('.part1').hide();
+                    $('.part2').show();
                 }
             })
     	}
@@ -206,7 +244,7 @@
                     // 指定图表的配置项和数据
                     var option = {
                             title: {
-                                text: website+"  "+title
+                                text: $("#websiteSelect").find("option:selected").text()+"  "+title
                             },
                             tooltip:{
                                 trigger: "axis",
@@ -252,7 +290,7 @@
                                 yAxisIndex: 1,
                                 label: {
                                     normal: {
-                                        show: true, //开启显示
+                                        show: false, //开启显示
                                         position: 'top', //在上方显示
                                         textStyle: { //数值样式
                                             color: 'black',
@@ -263,6 +301,7 @@
                             }]
                         };
                     myChart.setOption(option,true);
+
                 }
             })
         }
@@ -271,7 +310,7 @@
         	var date=$('.date').val();
         	var website=$('#websiteSelect').val();
         	var topN=$('#websiteSelectCount').val();
-        	if(topN==0) topN=3;
+//         	if(topN==0) topN=3;
         	var timelist="";
         	$.ajax({
                 url:contextPath+'/hotSearch/get/timelist',
@@ -329,16 +368,16 @@
                                 	var index=params[0].dataIndex;
                                 	var html="";
                                 	$(JSON.parse(data)).each(function(i,item){
-                                        html+="排名"+item[index].ranking+"<br>"+item[index].title+'<br><br>';
+                                        html+="排名"+item[index].ranking+"<br>"+'<div class="title-nav">'+item[index].title+'</div><br><br>';
                                     })
 //                                     console.log(html)
                                     $('#titlelist').html(html);
                                 	return res;
                                 }
                             },
-                            legend:{
-                            	data:legend
-                            },
+//                             legend:{
+//                             	data:legend
+//                             },
                             xAxis: {
                                 type: 'category',
                                 data:timelist,
@@ -352,58 +391,62 @@
                             series: multiseries
                         };
                     myChart.setOption(option,true);
+                    $('.part2').hide();
+                    $('.part1').show();
                 }
             })
         }
         
     </script>
 </head>
-<body>
-    <div>
-        <input class="website" type="button" value="知乎" target="zhihu" onclick="">
-        <input class="website" type="button" value="百度" target="baidu" onclick="">
-        <input class="website" type="button" value="微博" target="weibo" onclick="">
-        <input class="website" type="button" value="B站" target="bilibili" onclick="">
-        <input class="website" type="button" value="贴吧" target="tieba" onclick="">
-        <input class="website" type="button" value="抖音" target="douyin" onclick="">
-        <input class="website" type="button" value="头条" target="toutiao" onclick="">
-        <select id="websiteSelect">
-        </select>
-        <select id="websiteSelectCount">
-            <option value='0'>0</option>
-            <option value='1'>1</option>
-            <option value='3'>3</option>
-            <option value='5'>5</option>
-            <option value='10'>10</option>
-            <option value='20'>20</option>
-        </select>
-        <input class="date" type="text" value="2020-05-09" onclick="">
-        <input class="searchdate" type="button" onclick="searchdate()" value="搜索">
-    </div>    
-    <div style='width:100%;height:540px;float:left;box-sizing:border-box;overflow:auto;'>
-        <div id='chart3' style="width:40%;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
-        
-        </div>
-        
-        <div id="titlelist" style='width:20%;height:540px;border:1px solid #000;float:left;box-sizing:border-box;overflow:auto;'>
-        
-        </div>
-        
-        <div id="chart1" style="width: 40%;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
-        </div>
-    </div>
-    
-    
-    
-    <div style="margin:10px 0 10px 0;width:100%;height:20px;float:left;">
-        <input class="keyword" type="text" onclick="">
-        <input class="search" type="button" onclick="search()" value="搜索">
-    </div>   
-    <div style='width:100%;height:540px;float:left;box-sizing:border-box;overflow:auto;'>
-        <div class='left' style="width:500px;height:540px;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
-        
-        </div>
-        <div class='right' id="chart2" style="width: 1000px;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
+<body style="margin:0;padding:0;">
+    <div class='baseDiv' style="">
+        <div class='header' style="width:100%;height:60px;">
+            <input class="website" type="button" value="知乎" target="zhihu" onclick="">
+            <input class="website" type="button" value="百度" target="baidu" onclick="">
+            <input class="website" type="button" value="微博" target="weibo" onclick="">
+            <input class="website" type="button" value="B站" target="bilibili" onclick="">
+            <input class="website" type="button" value="贴吧" target="tieba" onclick="">
+            <input class="website" type="button" value="抖音" target="douyin" onclick="">
+            <input class="website" type="button" value="头条" target="toutiao" onclick="">
+            <select id="websiteSelect">
+            </select>
+            <select id="websiteSelectCount">
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='3'>3</option>
+                <option value='5'>5</option>
+                <option value='10' selected='selected'>10</option>
+                <option value='20'>20</option>
+                <option value='50'>50</option>
+            </select>
+            <input class="date" type="text" value="" onclick="">
+            <input class="searchdate" type="button" onclick="searchdate()" value="搜索">
+            
+            <input class="keyword" type="text" onclick="">
+            <input class="search" type="button" onclick="search()" value="搜索">
+        </div>    
+        <div class='page-content' style='float:left;box-sizing:border-box;position:relative;'>
+            <div class='part1' style="width:100%;height:100%;float:left;position:absolute;">
+                <div id='chart3' style="width:39%;height:540px;float:left;border:1px solid #000;box-sizing:border-box;">
+                
+                </div>
+                
+                <div id="titlelist" style='width:20%;height:540px;border:1px solid #000;float:left;box-sizing:border-box;overflow:auto;'>
+                
+                </div>
+                
+                <div id="chart1" style="width: 39%;height:540px;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
+                </div>
+            </div>
+            
+            <div class='part2' style="width:100%;height:100%;display:none;float:left;position:absolute;border:1px solid #000;">
+                <div class='left' style="width:25%;height:100%;float:left;border:1px solid #000;box-sizing:border-box;overflow:auto;">
+            
+                </div>
+                <div class='right' id="chart2" style="width: 75%;height:100%;border:1px solid #000;float:left;position:relative;box-sizing:border-box;">
+                </div>
+            </div>
         </div>
     </div>
 

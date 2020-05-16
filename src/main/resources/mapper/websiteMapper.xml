@@ -6,6 +6,7 @@
         <result column="id" jdbcType="INTEGER" property="id" />
         <result column="website" jdbcType="VARCHAR" property="time" />
         <result column="url" jdbcType="VARCHAR" property="website" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
     </resultMap>
 
     

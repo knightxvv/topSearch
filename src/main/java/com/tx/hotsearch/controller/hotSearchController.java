@@ -2,7 +2,6 @@ package com.tx.hotsearch.controller;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,8 +29,8 @@ public class hotSearchController {
         return hotSearchService.selectLatestHotSearchByWebsiteTopN(website,count);
     }
     
-    @RequestMapping(value="/search/{keyword}",method=RequestMethod.GET,produces="application/json;charset=utf-8")
-    public List<HashMap<String, Object>> selectLatestHotSearchByWebsiteTopN(@PathVariable("keyword") String keyword) {
+    @RequestMapping(value="/search/keyword",method=RequestMethod.GET,produces="application/json;charset=utf-8")
+    public List<HashMap<String, Object>> selectLatestHotSearchByWebsiteTopN(@RequestParam("keyword") String keyword) {
         return hotSearchService.searchTitleByKeyword(keyword);
     }
     

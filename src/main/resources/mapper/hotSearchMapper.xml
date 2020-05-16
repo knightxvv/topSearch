@@ -43,7 +43,10 @@
     </select>
     
     <select id="searchTitleByKeyword" resultType="java.util.HashMap">
-        SELECT distinct(title),website FROM t_hotsearch where title like CONCAT('%',#{keyword},'%');
+<!--         SELECT distinct(title),website FROM t_hotsearch where title like CONCAT('%',#{keyword},'%'); -->
+        SELECT distinct(t.title) as title,t.website,DATE_FORMAT(max(t.time),'%Y-%m-%d %H:%i:%S') as time,w.name 
+        FROM t_hotsearch t join t_website w where t.title like CONCAT('%',#{keyword},'%') and t.website=w.website group by title order by time;
+        
     </select>
     
     <select id="selectHotSearchByTitle" resultMap="BaseResultMap">

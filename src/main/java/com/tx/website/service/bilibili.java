@@ -21,8 +21,8 @@ public class bilibili {
 
 		Document document = Jsoup.parse(html);
         Elements elements = document.select(".rank-item");
-        
-        for (int i=0;i<elements.size();i++) {
+        int size=50;
+        for (int i=0;i<size;i++) {
 			String title=elements.get(i).select(".info a").get(0).html();
 			String content="";
 			int playcount=Integer.valueOf((int) (Float.valueOf(elements.get(i).select(".data-box").get(0).text().replace("万",""))*10000));

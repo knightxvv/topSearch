@@ -7,15 +7,17 @@ public class website {
     public String website;
     public String url;
     public String encoding;
+    public String name;
     
     public website() {
 
     }
     
-    public website(String website,String url,String encoding) {
+    public website(String website,String url,String encoding,String name) {
         this.website=website;
         this.url=url;
         this.encoding=encoding;
+        this.name=name;
     }
     
     public String toString() {
