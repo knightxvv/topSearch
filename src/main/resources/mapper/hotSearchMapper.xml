@@ -63,7 +63,16 @@
     
     <select id="getDetailOfHotSearch" resultType="java.util.HashMap">
         SELECT max(score) as maxScore,min(score) as minScore,max(ranking) as minRanking,min(ranking) as maxRanking,cast(avg(score) as DECIMAL(10,0)) as avgScore,
-            DATE_FORMAT(min(time),'%Y-%m-%d %H:%i:%S') as minTime 
+            DATE_FORMAT(min(time),'%Y-%m-%d %H:%i:%S') as minTime ,count(time) as count 
         FROM t_hotsearch where title=#{title} and website=#{website};
+    </select>
+    
+    <select id="selectWebsiteHistoryTop" resultType="java.util.HashMap">
+        select * from (select DATE_FORMAT(min(time),'%Y-%m-%d %H:%i:%S') as minTime,DATE_FORMAT(max(time),'%Y-%m-%d %H:%i:%S') as maxTime,
+                                TIMESTAMPDIFF(HOUR, min(time) , max(time)) as duration,
+                                count(time) as count,title,max(score) as maxScore,min(score) as minScore,website 
+                        from (SELECT * FROM t_hotsearch where website=#{website} order by score desc) as tmp 
+                        group by title) as t2
+        order by ${rankTag} desc limit ${count};
     </select>
 </mapper>

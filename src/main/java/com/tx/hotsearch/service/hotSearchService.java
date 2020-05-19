@@ -77,4 +77,11 @@ public class hotSearchService{
         map=hotSearchMapper.getDetailOfHotSearch(title, website);
         return map;
     }
+    
+    public List<HashMap<String,Object>> selectWebsiteHistoryTop(String website,int count,String rankTag){
+        List<HashMap<String,Object>> list=new LinkedList<>();
+        list=hotSearchMapper.selectWebsiteHistoryTop(website, count,rankTag);
+//        System.out.println(list);
+        return list;
+    }
 }

@@ -1,41 +1,909 @@
-2020-05-16 17:14:50.101  INFO 6012 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 6012 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
-2020-05-16 17:14:50.110  INFO 6012 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
-2020-05-16 17:14:50.174  INFO 6012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-05-16 17:14:50.175  INFO 6012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-05-16 17:14:51.259  INFO 6012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-05-16 17:14:51.267  INFO 6012 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-05-16 17:14:51.268  INFO 6012 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-05-16 17:14:51.337  INFO 6012 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
-2020-05-16 17:14:51.337  INFO 6012 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1162 ms
-2020-05-16 17:14:51.770  INFO 6012 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-05-16 17:14:51.932  INFO 6012 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-05-16 17:14:51.974  INFO 6012 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-05-16 17:14:52.019  INFO 6012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
-2020-05-16 17:14:52.022  INFO 6012 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 2.274 seconds (JVM running for 3.022)
-2020-05-16 17:14:56.446  INFO 6012 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-05-16 17:14:56.446  INFO 6012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-05-16 17:14:56.452  INFO 6012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2020-05-16 17:14:56.932  INFO 6012 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-05-16 17:14:57.383  INFO 6012 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-05-16 17:14:59.489  INFO 6012 --- [http-nio-8080-exec-10] com.tx.utils.MyResult                    : 2020-05-16 17:14:59 zhihu           成功抓取50条
-2020-05-16 17:20:00.012  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50a9f730 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.016  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6bd8cba0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.018  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74d7a19c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.021  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a37c909 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.023  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f4e74ae (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.025  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4266272c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.027  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b74b5bd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.029  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e8b602 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.032  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@70c4be14 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.034  WARN 6012 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5e3324ec (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2020-05-16 17:20:00.263  INFO 6012 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-16 17:20:00 zhihu           成功抓取50条
-2020-05-16 17:20:00.382  INFO 6012 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-16 17:20:00 baidu           成功抓取50条
-2020-05-16 17:20:00.458  INFO 6012 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-16 17:20:00 weibo           成功抓取50条
-2020-05-16 17:20:00.646  INFO 6012 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-16 17:20:00 tieba           成功抓取30条
-2020-05-16 17:20:00.739  INFO 6012 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-16 17:20:00 douyin          成功抓取30条
-2020-05-16 17:20:00.794  INFO 6012 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-16 17:20:00 toutiao         成功抓取60条
-2020-05-16 17:26:37.018  INFO 6012 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2020-05-16 17:26:37.021  INFO 6012 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2020-05-16 17:26:37.022  INFO 6012 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-05-16 17:26:37.023  INFO 6012 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-05-16 17:26:37.039  INFO 6012 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-19 14:25:01.923  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 14:25:01.934  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 14:25:01.982  INFO 1724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-19 14:25:01.982  INFO 1724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-19 14:25:02.992  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 14:25:03.001  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 14:25:03.001  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 14:25:03.068  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 14:25:03.068  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1086 ms
+2020-05-19 14:25:03.483  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 14:25:03.633  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 14:25:03.673  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 14:25:03.716  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 14:25:03.719  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 2.116 seconds (JVM running for 2.679)
+2020-05-19 14:25:09.769  INFO 1724 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 14:25:09.769  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 14:25:09.774  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-05-19 14:25:10.357  INFO 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-19 14:25:10.715  INFO 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-19 14:26:57.662  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3c907046 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.665  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@127b9295 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.668  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2dd6c2dc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.670  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a5e82bb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.673  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73e5ffe2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.675  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3dc42431 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.677  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@261fd177 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.679  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@285ad455 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.681  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@741c3453 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:26:57.683  WARN 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6865634d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:30:00.569  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:30:00 zhihu           成功抓取50条
+2020-05-19 14:30:00.676  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:30:00 baidu           成功抓取37条
+2020-05-19 14:30:00.770  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:30:00 weibo           成功抓取50条
+2020-05-19 14:30:00.972  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:30:00 tieba           成功抓取30条
+2020-05-19 14:30:01.048  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:30:00 douyin          成功抓取30条
+2020-05-19 14:30:01.131  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:30:00 toutiao         成功抓取60条
+2020-05-19 14:33:01.032  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f39d0d3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.038  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7467ad4e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.039  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6ee1a709 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.041  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5e2992b2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.042  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@176d59e4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.044  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74577def (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.045  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2db071a1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.046  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f9ecaa7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.048  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@42c106c9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:33:01.049  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@db6b37b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.593  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19a78e57 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.596  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@623e3422 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.598  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7426c6fd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.599  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@51d62b18 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.601  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@24d6211e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.603  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@375a9e82 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.604  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7509a7ba (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.606  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1567cce8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.607  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2cd18b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:38:22.610  WARN 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6361f182 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:40:00.189  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:40:00 zhihu           成功抓取50条
+2020-05-19 14:40:00.268  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:40:00 baidu           成功抓取37条
+2020-05-19 14:40:00.327  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:40:00 weibo           成功抓取50条
+2020-05-19 14:40:00.478  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:40:00 tieba           成功抓取30条
+2020-05-19 14:40:00.568  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:40:00 douyin          成功抓取30条
+2020-05-19 14:40:00.641  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:40:00 toutiao         成功抓取60条
+2020-05-19 14:42:45.644  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@380c02af (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.647  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7db8dd1f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.649  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78b8018c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.651  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@20797d4e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.653  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@285f133a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.655  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13b4630b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.657  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b38a490 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.658  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@40402fb4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.660  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@10562245 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:42:45.662  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@20caa77f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:45:14.945  INFO 1724 --- [Thread-6] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 14:45:14.946  INFO 1724 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 14:45:14.947  INFO 1724 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-19 14:45:14.957  INFO 1724 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-19 14:45:15.190  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 14:45:15.190  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 14:45:15.525  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 14:45:15.526  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 14:45:15.526  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 14:45:15.543  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 14:45:15.543  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 349 ms
+2020-05-19 14:45:15.661  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 14:45:15.703  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 14:45:15.735  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 14:45:15.747  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 14:45:15.748  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.595 seconds (JVM running for 1214.708)
+2020-05-19 14:45:15.749  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 14:45:32.019  INFO 1724 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 14:45:32.020  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 14:45:32.028  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-05-19 14:45:32.031  INFO 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-05-19 14:45:32.044  INFO 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-05-19 14:48:17.015  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36e3f1c0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.017  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a1250 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.020  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@10746ce7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.022  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@39b0f2d8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.024  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f559871 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.028  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f1d8f59 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.030  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@cbdcf09 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.032  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@32a5ca74 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.033  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@71705a41 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:48:17.034  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22c46471 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:50:00.316  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:50:00 zhihu           成功抓取50条
+2020-05-19 14:50:00.408  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:50:00 baidu           成功抓取37条
+2020-05-19 14:50:00.473  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:50:00 weibo           成功抓取50条
+2020-05-19 14:50:00.611  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:50:00 tieba           成功抓取30条
+2020-05-19 14:50:00.682  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:50:00 douyin          成功抓取30条
+2020-05-19 14:50:00.758  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 14:50:00 toutiao         成功抓取60条
+2020-05-19 14:51:43.619  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13ffa18 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.621  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a4d7150 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.623  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2736c16a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.624  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@59a700ae (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.627  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f8ef8cc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.629  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e68d39c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.632  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5f4466aa (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.634  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e07af9c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.636  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26d77808 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:51:43.638  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2eabab7d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.500  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13a10f77 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.501  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@115eeb7b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.503  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e76c44f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.504  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b7ba41 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.505  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2e7023ab (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.506  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4893102d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.508  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@60efe1cc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.509  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@58b22a22 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.511  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@777027e4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 14:59:30.512  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2732435f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:00:00.203  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:00:00 zhihu           成功抓取50条
+2020-05-19 15:00:00.291  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:00:00 baidu           成功抓取37条
+2020-05-19 15:00:00.371  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:00:00 weibo           成功抓取50条
+2020-05-19 15:00:00.593  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:00:00 bilibili        成功抓取50条
+2020-05-19 15:00:00.750  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:00:00 tieba           成功抓取30条
+2020-05-19 15:00:00.814  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:00:00 douyin          成功抓取30条
+2020-05-19 15:00:00.895  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:00:00 toutiao         成功抓取60条
+2020-05-19 15:10:00.002  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6aa0f18c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.004  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37998807 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.006  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a5648f7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.008  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5797e2a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.010  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@62ea30b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.011  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7d0cda79 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.013  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@751534df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.016  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1d7f5a3f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.017  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6eba8460 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.019  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@757e44dc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:10:00.366  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:10:00 zhihu           成功抓取50条
+2020-05-19 15:10:00.447  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:10:00 baidu           成功抓取37条
+2020-05-19 15:10:00.520  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:10:00 weibo           成功抓取50条
+2020-05-19 15:10:00.653  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:10:00 tieba           成功抓取30条
+2020-05-19 15:10:00.724  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:10:00 douyin          成功抓取30条
+2020-05-19 15:10:00.775  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:10:00 toutiao         成功抓取60条
+2020-05-19 15:20:00.001  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6970df5d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.004  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@31986d62 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.006  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6465860f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.008  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b8037e9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.010  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7657cc95 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.012  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4565c40 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.014  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4c4bf73b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.016  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@467ebe24 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.018  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@e05e11a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.019  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@380708c6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:20:00.272  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:20:00 zhihu           成功抓取50条
+2020-05-19 15:20:00.361  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:20:00 baidu           成功抓取37条
+2020-05-19 15:20:00.441  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:20:00 weibo           成功抓取50条
+2020-05-19 15:20:00.592  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:20:00 tieba           成功抓取30条
+2020-05-19 15:20:00.745  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:20:00 douyin          成功抓取30条
+2020-05-19 15:20:00.798  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:20:00 toutiao         成功抓取60条
+2020-05-19 15:30:00.002  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@185c4525 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.004  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7e051cbb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.006  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@df0283d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.009  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@77ff21cb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.011  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3944e7b1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.013  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6ff2c4e6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.015  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@634fb8e5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.018  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6db03c3e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.020  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73d72756 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.021  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@afb083e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:30:00.224  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:30:00 zhihu           成功抓取50条
+2020-05-19 15:30:00.298  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:30:00 baidu           成功抓取37条
+2020-05-19 15:30:00.358  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:30:00 weibo           成功抓取50条
+2020-05-19 15:30:00.548  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:30:00 tieba           成功抓取30条
+2020-05-19 15:30:00.702  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:30:00 douyin          成功抓取30条
+2020-05-19 15:30:00.758  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:30:00 toutiao         成功抓取60条
+2020-05-19 15:36:42.213  INFO 1724 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:36:42.214  INFO 1724 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:36:42.214  INFO 1724 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-05-19 15:36:42.224  INFO 1724 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-05-19 15:36:42.471  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:36:42.472  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:36:42.771  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:36:42.771  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:36:42.772  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:36:42.791  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:36:42.791  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 316 ms
+2020-05-19 15:36:42.909  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:36:42.940  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:36:42.967  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:36:42.978  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:36:42.979  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.542 seconds (JVM running for 4301.939)
+2020-05-19 15:36:42.980  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:37:23.511  INFO 1724 --- [Thread-14] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:37:23.513  INFO 1724 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:37:23.747  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:37:23.748  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:37:24.058  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:37:24.059  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:37:24.059  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:37:24.073  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:37:24.073  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 323 ms
+2020-05-19 15:37:24.170  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:37:24.201  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:37:24.226  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:37:24.237  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:37:24.238  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.525 seconds (JVM running for 4343.198)
+2020-05-19 15:37:24.239  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:37:54.460  INFO 1724 --- [Thread-19] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:37:54.462  INFO 1724 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:37:54.644  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:37:54.644  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:37:54.929  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:37:54.929  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:37:54.929  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:37:54.943  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:37:54.943  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 296 ms
+2020-05-19 15:37:55.025  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:37:55.055  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:37:55.081  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:37:55.093  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:37:55.094  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.483 seconds (JVM running for 4374.054)
+2020-05-19 15:37:55.095  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:39:39.556  INFO 1724 --- [Thread-24] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:39:39.558  INFO 1724 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:39:39.761  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:39:39.762  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:39:40.054  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:39:40.054  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:39:40.055  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:39:40.076  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:39:40.076  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 311 ms
+2020-05-19 15:39:40.161  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:39:40.192  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:39:40.218  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:39:40.229  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:39:40.230  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.5 seconds (JVM running for 4479.19)
+2020-05-19 15:39:40.231  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:40:00.001  INFO 1724 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-05-19 15:40:00.010  INFO 1724 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-05-19 15:40:00.283  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:40:00 zhihu           成功抓取50条
+2020-05-19 15:40:00.372  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:40:00 baidu           成功抓取37条
+2020-05-19 15:40:00.439  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:40:00 weibo           成功抓取50条
+2020-05-19 15:40:00.597  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:40:00 tieba           成功抓取30条
+2020-05-19 15:40:00.665  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:40:00 douyin          成功抓取30条
+2020-05-19 15:40:00.941  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:40:00 toutiao         成功抓取60条
+2020-05-19 15:44:08.604  INFO 1724 --- [Thread-29] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:44:08.605  INFO 1724 --- [Thread-29] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:44:08.605  INFO 1724 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-05-19 15:44:08.617  INFO 1724 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-05-19 15:44:08.837  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:44:08.837  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:44:09.144  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:44:09.144  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:44:09.144  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:44:09.158  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:44:09.158  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 319 ms
+2020-05-19 15:44:09.238  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:44:09.269  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:44:09.295  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:44:09.306  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:44:09.306  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.502 seconds (JVM running for 4748.266)
+2020-05-19 15:44:09.307  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:44:11.792  INFO 1724 --- [Thread-34] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:44:11.793  INFO 1724 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:44:11.989  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:44:11.989  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:44:12.267  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:44:12.268  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:44:12.268  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:44:12.281  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:44:12.281  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 289 ms
+2020-05-19 15:44:12.363  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:44:12.393  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:44:12.419  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:44:12.431  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:44:12.432  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.476 seconds (JVM running for 4751.392)
+2020-05-19 15:44:12.433  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:44:39.624  INFO 1724 --- [Thread-39] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:44:39.625  INFO 1724 --- [Thread-39] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:44:39.867  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:44:39.868  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:44:40.143  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:44:40.143  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:44:40.144  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:44:40.157  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:44:40.157  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 287 ms
+2020-05-19 15:44:40.239  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:44:40.270  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:44:40.296  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:44:40.307  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:44:40.308  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.473 seconds (JVM running for 4779.269)
+2020-05-19 15:44:40.310  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:45:04.407  INFO 1724 --- [Thread-44] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:45:04.408  INFO 1724 --- [Thread-44] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:45:04.626  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:45:04.626  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:45:04.892  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:45:04.892  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:45:04.893  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:45:04.906  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:45:04.906  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 278 ms
+2020-05-19 15:45:04.997  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:45:05.041  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:45:05.067  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:45:05.078  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:45:05.079  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.484 seconds (JVM running for 4804.039)
+2020-05-19 15:45:05.080  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:46:18.129  INFO 1724 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 15:46:18.130  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 15:46:18.132  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-05-19 15:46:18.350  INFO 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-05-19 15:46:18.359  INFO 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-05-19 15:49:32.891  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@42b7aa4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.894  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1bb5edf7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.896  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@408eda31 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.897  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1f2f76de (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.898  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@353d24a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.899  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@153bda5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.901  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@373ab0ec (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.902  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53c7a953 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.903  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@f839faf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:32.905  WARN 1724 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13a1b56f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:49:53.009  INFO 1724 --- [Thread-49] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 15:49:53.010  INFO 1724 --- [Thread-49] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:49:53.010  INFO 1724 --- [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-05-19 15:49:53.021  INFO 1724 --- [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-05-19 15:49:53.262  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 15:49:53.263  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 15:49:53.539  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 15:49:53.539  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 15:49:53.539  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 15:49:53.552  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 15:49:53.552  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 287 ms
+2020-05-19 15:49:53.636  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 15:49:53.667  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 15:49:53.694  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 15:49:53.705  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 15:49:53.706  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.476 seconds (JVM running for 5092.666)
+2020-05-19 15:49:53.706  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 15:50:00.000  INFO 1724 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-05-19 15:50:00.008  INFO 1724 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-05-19 15:50:00.206  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:50:00 zhihu           成功抓取50条
+2020-05-19 15:50:00.465  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:50:00 baidu           成功抓取37条
+2020-05-19 15:50:00.556  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:50:00 weibo           成功抓取50条
+2020-05-19 15:50:00.683  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:50:00 tieba           成功抓取30条
+2020-05-19 15:50:00.767  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:50:00 douyin          成功抓取30条
+2020-05-19 15:50:00.823  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 15:50:00 toutiao         成功抓取60条
+2020-05-19 15:50:01.191  INFO 1724 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 15:50:01.191  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 15:50:01.192  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-05-19 15:51:51.261  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4bf74d78 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.264  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@aca4743 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.267  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4ae7f06f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.269  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b8ae8c6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.271  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@324d0159 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.273  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6ae5b80c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.275  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ff449b7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.277  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73d44e57 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.280  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2949cebd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 15:51:51.282  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6eab2640 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.002  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7e2c7a84 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.005  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@308727d4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.007  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3d091c6e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.009  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@20ecb911 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.011  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b084bc2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.013  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@223870f0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.015  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@57a7e2b5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.017  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@12c6ed61 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.019  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7bf9f2a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.021  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a27a2df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:00:00.245  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:00:00 zhihu           成功抓取50条
+2020-05-19 16:00:00.432  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:00:00 baidu           成功抓取37条
+2020-05-19 16:00:00.515  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:00:00 weibo           成功抓取50条
+2020-05-19 16:00:00.657  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:00:00 tieba           成功抓取30条
+2020-05-19 16:00:00.721  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:00:00 douyin          成功抓取30条
+2020-05-19 16:00:01.178  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:00:00 toutiao         成功抓取60条
+2020-05-19 16:02:51.712  INFO 1724 --- [Thread-54] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:02:51.713  INFO 1724 --- [Thread-54] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:02:51.713  INFO 1724 --- [Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2020-05-19 16:02:51.723  INFO 1724 --- [Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2020-05-19 16:02:51.967  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:02:51.967  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:02:52.240  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:02:52.240  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:02:52.241  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:02:52.253  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:02:52.254  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 284 ms
+2020-05-19 16:02:52.331  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:02:52.360  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:02:52.386  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:02:52.397  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:02:52.398  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.463 seconds (JVM running for 5871.359)
+2020-05-19 16:02:52.399  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:03:05.180  INFO 1724 --- [Thread-59] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:03:05.181  INFO 1724 --- [Thread-59] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:03:05.393  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:03:05.393  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:03:05.669  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:03:05.669  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:03:05.670  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:03:05.683  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:03:05.683  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 288 ms
+2020-05-19 16:03:05.763  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:03:05.794  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:03:05.822  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:03:05.833  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:03:05.833  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.473 seconds (JVM running for 5884.794)
+2020-05-19 16:03:05.834  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:03:36.145  INFO 1724 --- [Thread-64] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:03:36.146  INFO 1724 --- [Thread-64] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:03:36.330  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:03:36.330  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:03:36.595  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:03:36.595  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:03:36.596  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:03:36.608  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:03:36.609  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 276 ms
+2020-05-19 16:03:36.685  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:03:36.715  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:03:36.741  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:03:36.752  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:03:36.752  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.453 seconds (JVM running for 5915.713)
+2020-05-19 16:03:36.753  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:03:59.852  INFO 1724 --- [Thread-69] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:03:59.854  INFO 1724 --- [Thread-69] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:04:00.077  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:04:00.078  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:04:00.350  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:04:00.350  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:04:00.350  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:04:00.364  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:04:00.364  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 284 ms
+2020-05-19 16:04:00.451  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:04:00.481  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:04:00.507  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:04:00.518  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:04:00.519  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.474 seconds (JVM running for 5939.479)
+2020-05-19 16:04:00.520  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:04:55.568  INFO 1724 --- [Thread-74] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:04:55.569  INFO 1724 --- [Thread-74] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:04:55.793  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:04:55.793  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:04:56.088  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:04:56.089  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:04:56.089  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:04:56.104  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:04:56.104  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 308 ms
+2020-05-19 16:04:56.194  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:04:56.229  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:04:56.259  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:04:56.269  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:04:56.270  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.513 seconds (JVM running for 5995.23)
+2020-05-19 16:04:56.271  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:05:25.573  INFO 1724 --- [Thread-79] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:05:25.574  INFO 1724 --- [Thread-79] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:05:25.845  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:05:25.845  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:05:26.106  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:05:26.107  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:05:26.107  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:05:26.120  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:05:26.120  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 272 ms
+2020-05-19 16:05:26.194  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:05:26.225  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:05:26.251  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:05:26.263  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:05:26.263  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.45 seconds (JVM running for 6025.224)
+2020-05-19 16:05:26.265  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:09:05.508  INFO 1724 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 16:09:05.509  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 16:09:05.511  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-05-19 16:09:05.737  INFO 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-05-19 16:09:05.750  INFO 1724 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-05-19 16:10:00.360  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:10:00 zhihu           成功抓取50条
+2020-05-19 16:10:00.439  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:10:00 baidu           成功抓取37条
+2020-05-19 16:10:00.618  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:10:00 weibo           成功抓取50条
+2020-05-19 16:10:00.787  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:10:00 tieba           成功抓取30条
+2020-05-19 16:10:00.859  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:10:00 douyin          成功抓取30条
+2020-05-19 16:10:00.954 ERROR 1724 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657) ~[na:1.8.0_181]
+	at java.util.ArrayList.get(ArrayList.java:433) ~[na:1.8.0_181]
+	at com.alibaba.fastjson.JSONArray.getJSONObject(JSONArray.java:245) ~[fastjson-1.2.35.jar:na]
+	at com.tx.website.service.toutiao.parse(toutiao.java:23) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at com.tx.website.service.websiteService.parseAllWebsite(websiteService.java:112) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_181]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2020-05-19 16:13:30.143  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ad39195 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.145  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3bee9bae (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.146  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6c264afd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.148  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a9f21d5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.150  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@14bdae33 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.152  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5bc164e1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.153  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5eeacc6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.155  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@760ca427 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.157  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@fb940e3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:13:30.159  WARN 1724 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5f8fdb99 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:14:05.903  INFO 1724 --- [Thread-84] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:14:05.904  INFO 1724 --- [Thread-84] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:14:05.904  INFO 1724 --- [Thread-84] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2020-05-19 16:14:05.914  INFO 1724 --- [Thread-84] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2020-05-19 16:14:06.161  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:14:06.161  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:14:06.450  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:14:06.450  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:14:06.450  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:14:06.464  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:14:06.464  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 301 ms
+2020-05-19 16:14:06.540  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:14:06.571  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:14:06.598  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:14:06.609  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:14:06.610  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.48 seconds (JVM running for 6545.57)
+2020-05-19 16:14:06.611  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:14:09.088  INFO 1724 --- [Thread-89] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:14:09.090  INFO 1724 --- [Thread-89] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:14:09.307  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:14:09.308  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:14:09.579  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:14:09.580  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:14:09.580  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:14:09.593  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:14:09.593  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 281 ms
+2020-05-19 16:14:09.665  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:14:09.699  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:14:09.725  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:14:09.735  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:14:09.736  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.465 seconds (JVM running for 6548.696)
+2020-05-19 16:14:09.737  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:14:19.678  INFO 1724 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 16:14:19.679  INFO 1724 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 16:14:19.682  INFO 1724 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-05-19 16:14:19.937  INFO 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2020-05-19 16:14:19.947  INFO 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2020-05-19 16:20:00.003  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@135d2b61 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.006  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19a54011 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.008  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5ca7cd41 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.010  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26dbe397 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.012  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6db15121 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.014  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5e27214e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.017  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3c88320e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.019  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@45b6b953 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.022  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22e9d09d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.024  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4523a8df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:20:00.272  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:20:00 zhihu           成功抓取50条
+2020-05-19 16:20:00.354  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:20:00 baidu           成功抓取37条
+2020-05-19 16:20:00.424  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:20:00 weibo           成功抓取50条
+2020-05-19 16:20:00.653  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:20:00 tieba           成功抓取30条
+2020-05-19 16:20:00.718  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:20:00 douyin          成功抓取30条
+2020-05-19 16:20:00.779  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:20:00 toutiao         成功抓取60条
+2020-05-19 16:21:38.088  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2e8e252d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.090  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@836cc8d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.093  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@655dbaa9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.095  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3aa54c62 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.097  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a60a36d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.099  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@140c5008 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.101  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c8c28d2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.103  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@cdab17d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.104  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@238e1040 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:21:38.106  WARN 1724 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@55749829 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.945  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@582a2966 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.947  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2ba64018 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.948  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@9dfe762 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.949  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@378e26 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.950  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5744ff70 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.952  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4efbd300 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.953  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3869c94a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.954  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@49336df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.956  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@745ce642 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:25:01.958  WARN 1724 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@64af481a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:26:09.825  INFO 1724 --- [Thread-94] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:26:09.826  INFO 1724 --- [Thread-94] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:26:09.827  INFO 1724 --- [Thread-94] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2020-05-19 16:26:09.830  INFO 1724 --- [Thread-94] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2020-05-19 16:26:10.036  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:26:10.037  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:26:10.316  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:26:10.316  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:26:10.316  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:26:10.330  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:26:10.330  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 291 ms
+2020-05-19 16:26:10.402  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:26:10.431  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:26:10.457  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:26:10.468  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:26:10.469  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.463 seconds (JVM running for 7269.429)
+2020-05-19 16:26:10.469  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:26:13.923  INFO 1724 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 16:26:13.925  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 16:26:13.928  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-05-19 16:26:14.172  INFO 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2020-05-19 16:26:14.181  INFO 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2020-05-19 16:27:23.081  INFO 1724 --- [Thread-99] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:27:23.082  INFO 1724 --- [Thread-99] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:27:23.082  INFO 1724 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2020-05-19 16:27:23.093  INFO 1724 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2020-05-19 16:27:23.274  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 1724 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:27:23.274  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:27:23.549  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:27:23.550  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:27:23.550  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:27:23.563  INFO 1724 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:27:23.563  INFO 1724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 286 ms
+2020-05-19 16:27:23.636  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:27:23.665  INFO 1724 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:27:23.691  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:27:23.703  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:27:23.703  INFO 1724 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.46 seconds (JVM running for 7342.663)
+2020-05-19 16:27:23.705  INFO 1724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:27:26.246  INFO 1724 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 16:27:26.248  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 16:27:26.251  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-05-19 16:27:26.494  INFO 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2020-05-19 16:27:26.505  INFO 1724 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2020-05-19 16:30:00.002  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6852268f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.005  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@62aa4dff (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.007  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@27a8dfce (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.009  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5e37f3ea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.012  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1645bfa4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.014  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2630cd26 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.016  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47872081 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.018  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26ce2338 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.021  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1d4d10da (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.028  WARN 1724 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3d34a7a8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:30:00.246  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:30:00 zhihu           成功抓取50条
+2020-05-19 16:30:00.320  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:30:00 baidu           成功抓取37条
+2020-05-19 16:30:00.377  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:30:00 weibo           成功抓取50条
+2020-05-19 16:30:00.515  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:30:00 tieba           成功抓取30条
+2020-05-19 16:30:00.586  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:30:00 douyin          成功抓取30条
+2020-05-19 16:30:00.643  INFO 1724 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:30:00 toutiao         成功抓取60条
+2020-05-19 16:30:03.397  INFO 1724 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-05-19 16:30:03.398  INFO 1724 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:30:03.399  INFO 1724 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:30:03.399  INFO 1724 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2020-05-19 16:30:03.405  INFO 1724 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2020-05-19 16:31:09.692  INFO 10808 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 10808 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:31:09.695  INFO 10808 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:31:09.742  INFO 10808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-19 16:31:09.742  INFO 10808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-19 16:31:10.930  INFO 10808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:31:10.939  INFO 10808 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:31:10.939  INFO 10808 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:31:11.009  INFO 10808 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:31:11.010  INFO 10808 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1267 ms
+2020-05-19 16:31:11.470  INFO 10808 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:31:11.634  INFO 10808 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:31:11.677  INFO 10808 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:31:11.722  INFO 10808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:31:11.725  INFO 10808 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 2.387 seconds (JVM running for 3.115)
+2020-05-19 16:31:16.047  INFO 10808 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 16:31:16.048  INFO 10808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 16:31:16.053  INFO 10808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-05-19 16:31:16.330  INFO 10808 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-19 16:31:16.687  INFO 10808 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-19 16:34:19.202  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 5104 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:34:19.205  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:34:19.243  INFO 5104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-19 16:34:19.244  INFO 5104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-19 16:34:20.185  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:34:20.193  INFO 5104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:34:20.194  INFO 5104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:34:20.258  INFO 5104 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:34:20.258  INFO 5104 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1014 ms
+2020-05-19 16:34:20.640  INFO 5104 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:34:20.796  INFO 5104 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:34:20.846  INFO 5104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:34:20.891  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:34:20.894  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 1.997 seconds (JVM running for 2.597)
+2020-05-19 16:34:35.419  INFO 5104 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 16:34:35.420  INFO 5104 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 16:34:35.424  INFO 5104 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-05-19 16:34:35.704  INFO 5104 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-19 16:34:36.035  INFO 5104 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-19 16:37:24.471  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@45530779 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.474  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@59157855 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.476  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@420c4c1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.478  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34067282 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.480  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5d23f09c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.482  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f86ecbd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.484  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d023340 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.486  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a17c600 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.487  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@687264ce (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:37:24.489  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@70098e79 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:40:00.582  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:40:00 zhihu           成功抓取50条
+2020-05-19 16:40:00.685  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:40:00 baidu           成功抓取37条
+2020-05-19 16:40:00.782  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:40:00 weibo           成功抓取50条
+2020-05-19 16:40:00.977  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:40:00 tieba           成功抓取30条
+2020-05-19 16:40:01.064  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:40:00 douyin          成功抓取30条
+2020-05-19 16:40:01.121  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:40:00 toutiao         成功抓取60条
+2020-05-19 16:41:12.503  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@e4b02d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.507  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@55b03480 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.509  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f794da (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.511  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5cd39b64 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.514  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@893b04a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.516  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36fca4c6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.517  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@23ec68ee (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.519  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6324df4c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.521  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@76a03282 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:41:12.524  WARN 5104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25a97204 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.508  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1904c403 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.510  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@63d41685 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.513  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@661485e4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.515  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@598f61f9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.517  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3312d22f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.519  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@70319af6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.521  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@32481ab1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.522  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@10ea25a8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.525  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@354c1e30 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:42:39.527  WARN 5104 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@49d6c445 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.915  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b66ca3f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.918  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@644573c2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.920  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@710e2cd7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.922  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c5427fb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.924  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1740016b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.927  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5854ab22 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.929  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@583c5c6b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.932  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@65eac368 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.935  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7236cde7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:45:13.939  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@fc67538 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.790  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@427c773e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.792  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56d92341 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.794  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5eefcc21 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.796  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f8b8545 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.798  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7c885f0d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.800  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6354b8f6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.801  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@43fafe79 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.803  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@60f8faee (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.805  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5eb6a1cb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:49:48.807  WARN 5104 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18e321e3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:50:00.235  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:50:00 zhihu           成功抓取50条
+2020-05-19 16:50:00.310  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:50:00 baidu           成功抓取37条
+2020-05-19 16:50:00.393  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:50:00 weibo           成功抓取50条
+2020-05-19 16:50:00.510  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:50:00 tieba           成功抓取30条
+2020-05-19 16:50:00.586  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:50:00 douyin          成功抓取30条
+2020-05-19 16:50:00.637  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 16:50:00 toutiao         成功抓取60条
+2020-05-19 16:51:19.728  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4bbf40fc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.730  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61c222f7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.732  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47211d39 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.734  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@76a80d81 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.735  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@90b4652 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.738  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@792e081e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.739  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36a90ad7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.741  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5bdd86 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.743  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53312209 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:51:19.746  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5ad6ae89 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 16:52:21.470  INFO 5104 --- [Thread-7] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:52:21.471  INFO 5104 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:52:21.471  INFO 5104 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-19 16:52:21.480  INFO 5104 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-19 16:52:21.745  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 5104 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:52:21.746  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:52:22.049  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:52:22.049  INFO 5104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:52:22.049  INFO 5104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:52:22.064  INFO 5104 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:52:22.064  INFO 5104 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 315 ms
+2020-05-19 16:52:22.164  INFO 5104 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:52:22.198  INFO 5104 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:52:22.227  INFO 5104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:52:22.239  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:52:22.240  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.531 seconds (JVM running for 1083.943)
+2020-05-19 16:52:22.242  INFO 5104 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:53:13.898  INFO 5104 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 16:53:13.900  INFO 5104 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 16:53:13.909  INFO 5104 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-05-19 16:53:14.139  INFO 5104 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-05-19 16:53:14.146  INFO 5104 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-05-19 16:58:24.897  INFO 5104 --- [Thread-12] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:58:24.899  INFO 5104 --- [Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:58:24.900  INFO 5104 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-05-19 16:58:24.913  INFO 5104 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-05-19 16:58:25.152  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 5104 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:58:25.153  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:58:25.440  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:58:25.441  INFO 5104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:58:25.441  INFO 5104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:58:25.459  INFO 5104 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:58:25.460  INFO 5104 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 304 ms
+2020-05-19 16:58:25.551  INFO 5104 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:58:25.584  INFO 5104 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:58:25.610  INFO 5104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:58:25.621  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:58:25.622  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.504 seconds (JVM running for 1447.325)
+2020-05-19 16:58:25.623  INFO 5104 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 16:58:45.155  INFO 5104 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 16:58:45.156  INFO 5104 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 16:58:45.162  INFO 5104 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-05-19 16:58:45.382  INFO 5104 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-05-19 16:58:45.394  INFO 5104 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-05-19 16:59:07.183  INFO 5104 --- [Thread-19] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 16:59:07.184  INFO 5104 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:59:07.185  INFO 5104 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-05-19 16:59:07.194  INFO 5104 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-05-19 16:59:07.466  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 5104 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 16:59:07.467  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 16:59:07.775  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 16:59:07.776  INFO 5104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 16:59:07.776  INFO 5104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 16:59:07.789  INFO 5104 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 16:59:07.789  INFO 5104 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 318 ms
+2020-05-19 16:59:07.874  INFO 5104 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 16:59:07.905  INFO 5104 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 16:59:07.931  INFO 5104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 16:59:07.943  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 16:59:07.944  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.513 seconds (JVM running for 1489.647)
+2020-05-19 16:59:07.945  INFO 5104 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 17:00:00.001  INFO 5104 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-05-19 17:00:00.016  INFO 5104 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-05-19 17:00:00.281  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:00:00 zhihu           成功抓取50条
+2020-05-19 17:00:00.366  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:00:00 baidu           成功抓取37条
+2020-05-19 17:00:00.436  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:00:00 weibo           成功抓取50条
+2020-05-19 17:00:00.573  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:00:00 tieba           成功抓取30条
+2020-05-19 17:00:18.456  INFO 5104 --- [Thread-26] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-19 17:00:18.456  INFO 5104 --- [Thread-26] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 17:00:18.457  INFO 5104 --- [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-05-19 17:00:18.467  INFO 5104 --- [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-05-19 17:00:18.685  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Starting TopSearchApplication on DESKTOP-OT1SN41 with PID 5104 (C:\Users\knightxv\Desktop\ee-workspace\topSearch\target\classes started by knightxv in C:\Users\knightxv\Desktop\ee-workspace\topSearch)
+2020-05-19 17:00:18.685  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : No active profile set, falling back to default profiles: default
+2020-05-19 17:00:18.971  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-19 17:00:18.972  INFO 5104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 17:00:18.972  INFO 5104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-19 17:00:18.986  INFO 5104 --- [restartedMain] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring embedded WebApplicationContext
+2020-05-19 17:00:18.986  INFO 5104 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 298 ms
+2020-05-19 17:00:19.068  INFO 5104 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 17:00:19.099  INFO 5104 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-19 17:00:19.124  INFO 5104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-19 17:00:19.136  INFO 5104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/topSearch'
+2020-05-19 17:00:19.137  INFO 5104 --- [restartedMain] com.tx.init.TopSearchApplication         : Started TopSearchApplication in 0.485 seconds (JVM running for 1560.84)
+2020-05-19 17:00:19.138  INFO 5104 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-19 17:00:21.644 ERROR 5104 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.IllegalStateException: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d47a3b2 has been closed already
+	at org.springframework.context.support.AbstractApplicationContext.assertBeanFactoryActive(AbstractApplicationContext.java:1092) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1107) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at com.tx.website.service.websiteService.parseAllWebsite(websiteService.java:110) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_181]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2020-05-19 17:00:24.619  INFO 5104 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/topSearch]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-19 17:00:24.620  INFO 5104 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-19 17:00:24.627  INFO 5104 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-05-19 17:00:24.862  INFO 5104 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-05-19 17:00:24.873  INFO 5104 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-05-19 17:05:27.650  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@330a682 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.653  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3279e205 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.654  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@659de74a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.656  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@631f59cd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.658  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@9a095d4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.660  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74b4272f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.662  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7e992944 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.663  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6751c66b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.665  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6ad2f160 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:05:27.667  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f0a3e4a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:10:00.230  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:10:00 zhihu           成功抓取50条
+2020-05-19 17:10:00.326  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:10:00 baidu           成功抓取37条
+2020-05-19 17:10:00.385  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:10:00 weibo           成功抓取50条
+2020-05-19 17:10:00.522  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:10:00 tieba           成功抓取30条
+2020-05-19 17:10:00.625  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:10:00 douyin          成功抓取30条
+2020-05-19 17:10:00.674  INFO 5104 --- [scheduling-1] com.tx.utils.MyResult                    : 2020-05-19 17:10:00 toutiao         成功抓取60条
+2020-05-19 17:12:49.119  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c5b5abc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.121  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2cbf008f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.122  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a4abf7f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.123  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3c428c30 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.125  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3897f047 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.126  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6c7824a2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.127  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a6cf15 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.129  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b2df05d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.130  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2c3f28b7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-05-19 17:12:49.131  WARN 5104 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@14f44a6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

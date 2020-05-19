@@ -56,4 +56,11 @@ public class hotSearchController {
             @RequestParam("website") String website) {
         return hotSearchService.getDetailOfHotSearch(title,website);
     }
+    
+    @RequestMapping(value="/get/history",method=RequestMethod.GET,produces="application/json;charset=utf-8")
+    public List<HashMap<String,Object>> selectWebsiteHistoryTop(@RequestParam("website") String website,
+            @RequestParam(value="count",defaultValue="20") int count,
+            @RequestParam(value="rankTag",defaultValue="maxScore") String rankTag) {
+        return hotSearchService.selectWebsiteHistoryTop(website,count,rankTag);
+    }
 }

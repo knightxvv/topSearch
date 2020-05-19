@@ -39,4 +39,8 @@ public interface hotSearchMapper {
     
     //按标题获取热搜的详细信息，最高最低排名、热度、时间等
     HashMap<String,Object> getDetailOfHotSearch(String title,String website);
+    
+    //获取某网站的最高热度排名，按标题划分,
+    //rankTag:排序标识，包括maxScore,minScore,duration,count,minTime,maxTime
+    List<HashMap<String,Object>> selectWebsiteHistoryTop(String website,int count,String rankTag);
 }
