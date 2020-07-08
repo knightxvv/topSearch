@@ -14,3 +14,11 @@ function getRandomUuid(){
 	}
 	return uuid;
 }
+
+function getD(){
+	var day = new Date();
+	var y=day.getFullYear();
+	var m=day.getMonth()+1<10?'0'+(day.getMonth()+1):day.getMonth()+1;
+	var d=day.getDate()<10?('0'+day.getDate()):day.getDate();
+//	$('.date').val( y+"-" + m + "-" + d);
+}

@@ -11,4 +11,9 @@ public class pageController {
     public String init() {
         return "html/index.html";
     }
+    
+    @RequestMapping("registry")
+    public String registry() {
+        return "html/registry.html";
+    }
 }

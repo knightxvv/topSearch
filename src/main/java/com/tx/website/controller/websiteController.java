@@ -11,7 +11,8 @@ import com.tx.website.service.*;
 import com.tx.website.dao.*;
 import com.tx.utils.*;
 
-@RestController@RequestMapping(value="/website")
+@RestController
+@RequestMapping(value="/website")
 public class websiteController {
     @Autowired
     MyMailUtil MyMailUtil;
