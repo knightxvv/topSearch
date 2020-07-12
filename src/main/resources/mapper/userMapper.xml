@@ -10,8 +10,8 @@
     </resultMap>
     
     <insert id="registry" parameterType="com.tx.user.dao.User">
-      insert into t_user(userid,username,password,email,active,activecode)
-      values (#{userid},#{username},#{password},#{email},#{active},#{activecode})
+      insert into t_user(userid,username,password,email,active,activecode,createtime)
+      values (#{userid},#{username},#{password},#{email},#{active},#{activecode},#{createtime})
     </insert>
     
     <select id="userExist" parameterType="com.tx.user.dao.User" resultType="java.lang.Integer">
@@ -21,5 +21,21 @@
     <update id="activeAccount">
       update t_user set active='1' where activecode=#{activecode}
     </update>
+
+    <select id="userPasswordVarify" parameterType="com.tx.user.dao.User" resultType="java.lang.Integer">
+      select count(userid) from t_user where userid=#{userid} and password=#{password} and active='1'
+    </select>
     
+    <insert id="setUserOnline">
+      REPLACE  into t_user_online(userid,logintime,token)
+      values (#{userid},#{logintime},#{token})
+    </insert>
+    
+    <select id="getUseridByToken" resultType="java.lang.String">
+      select userid from t_user_online where token=#{token}
+    </select>
+    
+    <select id="getUserByUserid" resultType="com.tx.user.dao.User">
+      select * from t_user where userid=#{userid}
+    </select>
 </mapper>

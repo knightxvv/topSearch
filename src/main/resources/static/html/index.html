@@ -147,6 +147,18 @@
         	$('.page-content').width($('.baseDiv').width())
         	$('.page-content').height($('.baseDiv').height()-60)
         	
+        	$.ajax({
+                url:contextPath+'/user/getCurrentUser',
+                type:'get',
+                dataType:'text',
+                async:false,
+                success:function(data){
+                	data=JSON.parse(data);
+                	$('.login').remove();
+                	$('.header-right').prepend(data.userid);
+                }
+            })
+        	
         	
         	var day = new Date();
         	var y=day.getFullYear();
@@ -359,7 +371,7 @@
                                         position: 'right', //在上方显示
                                         textStyle: { //数值样式
                                             color: 'black',
-                                            fontSize: 3
+                                            fontSize: 15
                                         }
                                     }
                                 }
@@ -460,7 +472,7 @@
                                         position: 'top', //在上方显示
                                         textStyle: { //数值样式
                                             color: 'black',
-                                            fontSize: 3
+                                            fontSize: 15
                                         }
                                     }
                                 }
@@ -475,7 +487,7 @@
                                         position: 'top', //在上方显示
                                         textStyle: { //数值样式
                                             color: 'black',
-                                            fontSize: 3
+                                            fontSize: 15
                                         }
                                     }
                                 }
@@ -623,6 +635,11 @@
         	$('#iframe').show();
         	$('#iframe').attr('src',contextPath+'/registry')
         	$('#maskDiv').show();
+        }
+        function login(){
+            $('#iframe').show();
+            $('#iframe').attr('src',contextPath+'/login')
+            $('#maskDiv').show();
         }
         
         function close(){

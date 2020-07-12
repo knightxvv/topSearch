@@ -50,7 +50,7 @@ public class MyMailUtil {
             System.out.println(user.getemail());
             simpleMailMessage.setSubject("来自topSearch的激活邮件");
             String text="";
-            text="点击"+getIPAndPort.getUrl()+"/topSearch/user/activeAccount?id="+user.activecode+"激活你的账号";
+            text="点击   "+getIPAndPort.getUrl()+"/topSearch/user/activeAccount?id="+user.activecode+"   激活你的账号";
             simpleMailMessage.setText(text);
             mailSender.send(simpleMailMessage);//发送
             logger.info(String.format("%s 成功发送至%s",time,user.getemail()));

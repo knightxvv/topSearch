@@ -12,4 +12,12 @@ public interface UserMapper {
     int userExist(User user);
     
     boolean activeAccount(String activecode);
+    
+    int userPasswordVarify(String userid,String password);
+    
+    boolean setUserOnline(String userid,String logintime,String token);
+    
+    String getUseridByToken(String token);
+    
+    User getUserByUserid(String userid);
 }

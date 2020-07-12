@@ -16,4 +16,9 @@ public class pageController {
     public String registry() {
         return "html/registry.html";
     }
+    
+    @RequestMapping("login")
+    public String login() {
+        return "html/login.html";
+    }
 }
