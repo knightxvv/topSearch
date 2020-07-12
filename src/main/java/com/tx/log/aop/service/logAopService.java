@@ -31,6 +31,7 @@ public class logAopService {
     @After("execution(* com.tx.user.controller.UserController.login(..))")
     public void commit() {
         System.out.println("用户登录成功");
+        
     }
 //    // 运行通知
 //    @AfterReturning
